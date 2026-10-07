@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     {
       name: "norin-b",
-      script: "dist/src/main.js",
+      script: "dist/main.js",
       cwd: "/home/nozima/od/rent-norin/backend",
       interpreter: "/home/nozima/.nvm/versions/node/v20.19.6/bin/node",
       watch: false,
