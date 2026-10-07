@@ -1,0 +1,32 @@
+/* .ul>li: */
+
+.item{
+    font-weight: 600;
+    border-bottom: 0.2px dotted #111;
+    width: 100%;
+}
+
+.subItem{
+    margin: 10px;
+    border: 1px dotted #000;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-color: #F2F4F7;
+    font-weight: 500;
+    cursor: pointer;
+    color: #000;
+}
+
+.subItem:hover{
+    color: var(--white);
+    background-color: var(--primary);
+}
+
+.maydaBtn{
+    width: 100%;
+    padding: 15px 10px;
+    margin: 20px 0px;
+    font-weight: normal;
+    font-size: 16px;
+}
+

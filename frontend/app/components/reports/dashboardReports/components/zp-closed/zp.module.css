@@ -1,0 +1,34 @@
+.itemsBox{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 900px) {
+    .itemsBox {
+      grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .itemsBox {
+      grid-template-columns: 1fr;
+    }
+}
+.title{
+    margin: 20px 0px;
+    font-weight: 700;
+    background: rgb(1, 150, 1);
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.13);
+}
+
+.button{
+  margin-left: 20px;
+  padding: 5px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 700;
+}

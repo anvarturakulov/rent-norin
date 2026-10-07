@@ -1,0 +1,39 @@
+.box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.label {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-color);
+  white-space: nowrap;
+  min-width: fit-content;
+}
+
+.select {
+  display: block;
+  padding: 10px 15px;
+  font-size: 16px;
+  line-height: 1.2;
+  width: 100%;
+  border: 0.6px dotted blue;
+  background-color: #fff;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.select:hover {
+  border-color: #1976d2;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.select:focus {
+  outline: none;
+  border-color: #1976d2;
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
+}
+

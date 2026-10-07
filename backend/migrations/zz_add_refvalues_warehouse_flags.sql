@@ -1,0 +1,5 @@
+ALTER TABLE refvalues
+    ADD COLUMN IF NOT EXISTS "isMainWarehouse" BOOLEAN NOT NULL DEFAULT false;
+
+ALTER TABLE refvalues
+    ADD COLUMN IF NOT EXISTS "isDefectWarehouse" BOOLEAN NOT NULL DEFAULT false;

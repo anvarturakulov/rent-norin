@@ -1,0 +1,33 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10070;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  background: rgba(23, 23, 23, 0.45);
+}
+
+.box {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 15px;
+  width: 350px;
+  max-width: 100%;
+  position: relative;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #000;
+  text-align: center;
+}
+
+.input {
+  font-size: 18px;
+}
+
+.btnBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}

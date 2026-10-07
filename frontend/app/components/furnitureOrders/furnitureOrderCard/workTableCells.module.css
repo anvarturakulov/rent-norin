@@ -1,0 +1,20 @@
+/* Сброс стилей браузера для <input> внутри ячеек таблицы (рядом с классами .cellEditable из furnitureOrderCard). */
+.workTableCellInput {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    font: inherit;
+    line-height: 1.35;
+    color: inherit;
+    background: transparent;
+    border: none;
+    outline: none;
+    min-width: 0;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.workTableCellInput:disabled {
+    cursor: not-allowed;
+}

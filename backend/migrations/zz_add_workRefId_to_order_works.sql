@@ -1,0 +1,1 @@
+ALTER TABLE order_works ADD COLUMN IF NOT EXISTS "workRefId" BIGINT;

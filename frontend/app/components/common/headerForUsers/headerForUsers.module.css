@@ -1,0 +1,83 @@
+.title{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.newWindow{
+    background-color: #eff5e3;
+    padding:10px;
+}
+
+.windowActions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.minimizeBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: none;
+    border-radius: 4px;
+    background: transparent;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    color: inherit;
+}
+
+.minimizeBtn:hover {
+    background: rgba(0, 0, 0, 0.06);
+}
+
+.ico{
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
+}
+
+.ico:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.box{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+    border-bottom: 1px dotted #000;
+    border-top: 1px dotted #000;
+    padding: 10px 0px;
+    user-select: none;
+}
+
+.menu {
+    position: fixed;
+    width: 50px;
+    height: 40px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 100;
+    padding: 5px;
+}
+
+.menu:hover{
+    padding: 20px 10px;
+    background: #F5F5F5;
+    width: 15%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.icoHome{
+    width: 30px;
+    height: 30px;
+    /* background: #000; */
+}

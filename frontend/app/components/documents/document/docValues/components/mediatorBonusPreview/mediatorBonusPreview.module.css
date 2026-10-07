@@ -1,0 +1,26 @@
+.wrap {
+  margin-top: 8px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: var(--background-secondary, #f5f5f5);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.hint {
+  color: #856404;
+  margin: 0 0 6px;
+}
+
+.summary {
+  margin: 0;
+}
+
+.bonus {
+  font-weight: 600;
+}
+
+.warning {
+  color: #b45309;
+  margin: 4px 0 0;
+}

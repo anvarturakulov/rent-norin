@@ -1,0 +1,373 @@
+.container {
+    /* max-width: 1200px; */
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    user-select: none;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    border: var(--border-width) solid var(--border-color-light);
+    margin-bottom: 10px;
+}
+
+.table td,
+.table th {
+    border-left: var(--border-width-divider) solid var(--border-color-table);
+    text-align: left;
+    padding: 10px 7px;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f5f5f5;
+    
+}
+
+.table tr {
+    margin: 5px 0;
+    border: var(--border-width-divider) solid var(--border-color-table);
+}
+
+
+
+.table tr:hover {
+    margin: 5px 0;
+    border: var(--border-width) solid var(--border-color-focus);
+    /* background-color: #f5f5f5; */
+}
+
+.table tr.lastActed {
+    background-color: #fff8e1 !important;
+    box-shadow: inset 4px 0 0 #f9a825;
+}
+
+.table tr.lastActed:hover {
+    background-color: #fff3cd !important;
+}
+
+.table th {
+    font-weight: 500;
+}
+
+/* Вариант B: один скролл у области дашборда; шапка таблицы липнет к верху при прокрутке */
+.table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: #f0f0f0;
+    box-shadow: 0 1px 0 #e6e6e6;
+}
+
+.table thead th.red {
+    background-color: yellow;
+    color: red;
+}
+
+.headerRow {
+    cursor: default;
+    user-select: none;
+}
+
+.headerRowFiltersOn th {
+    color: #d32f2f;
+}
+
+.filterRow th {
+    position: sticky;
+    top: 42px;
+    z-index: 2;
+    padding: 6px 5px;
+    font-weight: 400;
+    background: #fafafa;
+    box-shadow: 0 1px 0 #e6e6e6;
+    vertical-align: middle;
+}
+
+.filterInput {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4px 6px;
+    font-size: 13px;
+    border: 1px solid var(--border-color-table);
+    border-radius: 3px;
+    background: white;
+    color: #333;
+}
+
+.filterInput::placeholder {
+    color: #aaa;
+    font-size: 12px;
+}
+
+.filterInput:focus {
+    outline: none;
+    border-color: #1976d2;
+}
+
+.filterInputActive {
+    border-color: #d32f2f;
+    background: #fff8f8;
+}
+
+.rowId{
+    width: 80px;
+}
+
+.interEnterpriseId{
+    background-color: #7de10b !important;
+    color: #000;
+    font-weight: 500;
+}
+
+.rowDate{
+    width: 100px;
+}
+
+.rowDateLine{
+    display: block;
+}
+
+.rowAction{
+    width: 50px;
+}
+
+.rowSumma{
+    width: 120px;
+}
+
+.tdSumma{
+    text-align: right!important;
+}
+
+.toolsRentalCompact{
+    width: 130px;
+    font-size: 12px;
+    line-height: 1.35;
+    vertical-align: top;
+}
+
+.toolsRentalCompactLine{
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.trRow{
+    cursor: zoom-in;
+}
+
+.btns{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.deleted{
+    background-color: red;
+    color: #fff;
+    text-decoration: line-through;
+    font-weight: 700;
+}
+
+.proveden {
+    color: #fff;
+    background-color: #0350f6;
+    /* color: #0350f6; */
+    font-weight: 500;
+    border-right: 6px solid #0350f6;
+    /* border-right: 1px solid 000; */
+}
+
+.open {
+    color: #000;
+    font-weight: 400;
+}
+
+.pending {
+    background-color: red;
+    color: #000;
+    font-weight: 500;
+    border-left: 6px solid #ffc107;
+}
+
+.rejected {
+    background-color: #a60bb4;
+    color: #fff;
+    font-weight: 500;
+    border-left: 6px solid #dc3545;
+}
+
+.error{
+    color: #fff;
+    background-color: red!important;
+}
+
+.icoTrash{
+    width: 20px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.icoShow {
+    width: 20px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.icoSave{
+    width: 20px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+
+.icoTrash:hover{
+    fill: red;
+}
+
+.icoShow:hover{
+    fill: blue;
+}
+
+.title{
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.newElement{
+    margin-bottom: 20px;
+}
+
+.red {
+    color: red;
+    background-color: yellow;
+    text-transform: uppercase;
+    text-align: center!important;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    align-items: center;
+}
+
+.label{
+    margin-left: 10px;
+}
+
+.checkboxs{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 10px;
+}
+
+.button{
+    width: 250px;
+    padding: 5px 10px;
+}
+
+.disabled {
+    display: none;
+}
+
+.checkModal {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+    z-index: 1000;
+  }
+  
+.checkModal td {
+    border: none;
+    padding: 0;
+    vertical-align: top;
+}
+
+.icoPrint {
+    width: 20px;
+    cursor: pointer;
+    margin: 0 auto;
+    fill: #007bff;
+}
+
+.icoPrint:hover {
+    fill: #0056b3;
+    transform: scale(1.1);
+}
+
+.icoDuplicate {
+    width: 20px;
+    cursor: pointer;
+    margin: 0 auto;
+    fill: #444;
+}
+
+.icoDuplicate:hover {
+    fill: #0350f6;
+    transform: scale(1.05);
+}
+
+/* Стиль для использованных накладных (exitCompleted = true) */
+.exitCompleted {
+    background-color: #0066cc !important;
+    color: white !important;
+}
+
+.exitCompleted td {
+    background-color: #0066cc !important;
+    color: white !important;
+}
+
+.tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.tab {
+    padding: 6px 32px;
+    background-color: #f9f9f9;
+    border: 1px solid var(--border-color-light);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    transition: all 0.2s ease;
+    outline: none;
+    text-align: center;
+    min-width: 120px;
+}
+
+.tab:hover {
+    background-color: #f0f0f0;
+    color: #333;
+    border-color: var(--border-color-light);
+}
+
+.tabActive {
+    background-color: #0350f6;
+    color: #fff;
+    border-color: #0350f6;
+    font-weight: 500;
+}
+
+.tabActive:hover {
+    background-color: #0240c4;
+    border-color: #0240c4;
+    color: #fff;
+}

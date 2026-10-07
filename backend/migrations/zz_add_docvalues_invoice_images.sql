@@ -1,0 +1,4 @@
+ALTER TABLE "docvalues"
+ADD COLUMN IF NOT EXISTS "invoiceImagePath2" VARCHAR(255);
+ALTER TABLE "docvalues"
+ADD COLUMN IF NOT EXISTS "invoiceImagePath3" VARCHAR(255);

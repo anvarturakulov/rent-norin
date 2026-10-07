@@ -1,0 +1,107 @@
+.sectionContainer {
+    margin-bottom: 24px;
+    border: 1px solid var(--border-color-light);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+    background: #fff;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    text-align: center;
+    color: #1e293b;
+}
+
+.schetSelector {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.schetSelector label {
+    font-weight: 600;
+    color: #334155;
+}
+
+.select {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color-light);
+    border-radius: 6px;
+    background-color: white;
+    font-size: 14px;
+    min-width: 200px;
+}
+
+.select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.table thead tr {
+    background-color: #f0f4f8;
+    border-bottom: 1px solid var(--border-color-light);
+}
+
+.table th,
+.table td {
+    padding: 8px 10px;
+    text-align: left;
+    border: 0.5px solid var(--border-color-light);
+}
+
+.table th {
+    font-weight: 600;
+    color: #334155;
+}
+
+.titleName {
+    min-width: 200px;
+    font-weight: 600;
+}
+
+.titleValue {
+    min-width: 120px;
+    text-align: right;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.noData {
+    text-align: center;
+    padding: 40px 20px;
+    color: #64748b;
+    font-size: 15px;
+}
+
+@media print {
+    .title {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .noData {
+        font-size: 12px;
+        padding: 20px 10px;
+    }
+}

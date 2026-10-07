@@ -1,0 +1,60 @@
+.controls {
+  position: absolute;
+  top: 19px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 10;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0.6px dotted var(--black-300, var(--border-color-light));
+  border-radius: 5px;
+  background: #fff;
+  color: var(--black-600, #6b7280);
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+.btn:hover {
+  transform: scale(1.08);
+  border-style: solid;
+  border-color: var(--black-400, #9ca3af);
+  color: var(--black-800, #374151);
+}
+
+.btn:active {
+  transform: scale(1);
+}
+
+.minimizeBtn:hover {
+  background: #f8fafc;
+}
+
+.closeBtn:hover {
+  border-color: #f87171;
+  color: #dc2626;
+  background: #fffbfb;
+}
+
+.closeBtn:focus-visible,
+.minimizeBtn:focus-visible {
+  outline: 1px dotted var(--black-500, #6b7280);
+  outline-offset: 2px;
+}

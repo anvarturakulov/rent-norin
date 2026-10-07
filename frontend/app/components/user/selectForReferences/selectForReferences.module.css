@@ -1,0 +1,28 @@
+.select{
+    display: block;
+    padding: 5px 10px;
+    font-size: 16px;
+    line-height: 16px;
+    width: 100%;
+    border: 0.6px dotted blue;
+    background-color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+.option {
+    font-size: 14px;
+    color: blue;
+}
+
+.label {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    margin: 10px 0px;
+    text-align: left;
+}
+
+.chooseMe{
+    color: red;
+    font-size: 18px;
+}

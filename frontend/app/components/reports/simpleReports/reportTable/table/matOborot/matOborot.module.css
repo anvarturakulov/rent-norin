@@ -1,0 +1,110 @@
+.matOborotRoot {
+    width: 100%;
+}
+
+.title {
+    margin: 0;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+    background: #fafbfc;
+    border-bottom: 1px solid var(--border-color-light);
+}
+
+.table td,
+.table th {
+    border: 0.5px solid var(--border-color-light);
+    text-align: right;
+    padding: 8px 10px;
+    font-weight: 400;
+    font-size: 13px;
+    vertical-align: middle;
+    font-variant-numeric: tabular-nums;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sectionTitle {
+    position: sticky;
+    top: var(--report-title-offset);
+    z-index: 11;
+    color: #1e293b;
+    margin: 0;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    background: #fafbfc;
+    border-bottom: 1px solid var(--border-color-light);
+    box-shadow: 0 1px 0 #e2e8f0;
+}
+
+.table thead {
+    position: sticky;
+    top: calc(var(--report-title-offset) + var(--section-title-offset));
+    z-index: 10;
+    background: #fff;
+}
+
+.tableOnlyHead thead {
+    top: var(--report-title-offset);
+}
+
+.table thead td {
+    text-align: center;
+    font-weight: 600;
+    font-size: 13px;
+    background: #f0f4f8;
+    color: #334155;
+    box-shadow: 0 1px 0 #e2e8f0;
+}
+
+.table tbody tr:nth-child(even) {
+    background: #fafafa;
+}
+
+.table tbody tr:hover {
+    background: #f1f5f9;
+}
+
+.totalTd {
+    font-size: 14px !important;
+    font-weight: 600;
+    text-align: right !important;
+    background: #e8f4f8 !important;
+    font-variant-numeric: tabular-nums;
+}
+
+.button {
+    margin-left: 20px;
+    padding: 5px 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 600;
+    border: 1px solid var(--border-color-light);
+    background: #f8fafc;
+}
+
+.button:hover {
+    background: #f1f5f9;
+}
+
+.sectionContainer {
+    margin-bottom: 24px;
+    border: 1px solid var(--border-color-light);
+    border-radius: 8px;
+    overflow: visible;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+@media print {
+    .sectionTitle,
+    .table thead {
+        position: static;
+        box-shadow: none;
+    }
+}

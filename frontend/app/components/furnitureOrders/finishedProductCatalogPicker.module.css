@@ -1,0 +1,111 @@
+.row {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+    width: 100%;
+}
+
+.readout {
+    flex: 1;
+    min-width: 0;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    border: 1px solid var(--border-color-light);
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.35;
+    word-break: break-word;
+    background: #f8fafc;
+    color: #94a3b8;
+}
+
+.readoutSelected {
+    background: #fff;
+    color: #1e293b;
+}
+
+.readoutClickable {
+    cursor: pointer;
+}
+
+.readoutClickable:hover:not(:disabled) {
+    border-color: #90caf9;
+    background: #f0f7ff;
+}
+
+.readoutDisabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+.catalogBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 8px 12px;
+    min-width: 44px;
+    min-height: 44px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background: var(--primary, #1976d2);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s;
+}
+
+.catalogBtn:hover:not(:disabled) {
+    background: #1565c0;
+}
+
+.catalogBtn:disabled {
+    background: #90caf9;
+    cursor: not-allowed;
+}
+
+.catalogBtnIcon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+.clearBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-shrink: 0;
+    padding: 8px 12px;
+    min-height: 44px;
+    border: 1px solid var(--border-color-light);
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #546e7a;
+    background: #fff;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.clearBtn:hover:not(:disabled) {
+    border-color: #ef9a9a;
+    color: #c62828;
+    background: #ffebee;
+}
+
+.clearBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.clearBtnIcon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+

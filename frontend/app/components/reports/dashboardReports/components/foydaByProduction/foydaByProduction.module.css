@@ -1,0 +1,257 @@
+.title {
+  margin: 20px 0px;
+  font-weight: 600;
+  background: #2563EB;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 16px;
+  box-shadow: 8px 8px 8px 0px rgba(34, 60, 80, 0.13);
+}
+
+.tableContainer {
+  max-height: 600px;
+  overflow-y: auto;
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.table {
+  font-size: 14px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table td,
+.table th {
+  border: 0.5px solid var(--border-color-light);
+  text-align: right;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.table thead {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 10;
+}
+
+.table thead td {
+  text-align: center;
+  font-weight: 600;
+  font-size: 13px;
+  background: #f5f5f5;
+}
+
+.table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Колонки с одинаковой шириной (кроме номера и названия цеха) */
+.table td:nth-child(1),
+.table th:nth-child(1) {
+  width: 50px !important;
+  max-width: 50px !important;
+  text-align: center;
+}
+
+.table td:nth-child(2),
+.table th:nth-child(2) {
+  text-align: left !important;
+  font-weight: 500;
+  min-width: 150px;
+  width: 150px !important;
+  max-width: 150px !important;
+}
+
+/* Все остальные колонки (доход и расходы) - одинаковой ширины */
+.table td:nth-child(3),
+.table th:nth-child(3),
+.table td:nth-child(4),
+.table th:nth-child(4),
+.table td:nth-child(5),
+.table th:nth-child(5),
+.table td:nth-child(6),
+.table th:nth-child(6),
+.table td:nth-child(7),
+.table th:nth-child(7),
+.table td:nth-child(8),
+.table th:nth-child(8),
+.table td:nth-child(9),
+.table th:nth-child(9),
+.table td:nth-child(10),
+.table th:nth-child(10),
+.table td:nth-child(11),
+.table th:nth-child(11),
+.table td:nth-child(12),
+.table th:nth-child(12),
+.table td:nth-child(13),
+.table th:nth-child(13) {
+  width: 120px !important;
+  min-width: 120px !important;
+  max-width: 120px !important;
+}
+
+.totalRow {
+  font-weight: 700;
+  background: #e8e8e8;
+}
+
+.totalRow td {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* Стили для печати */
+@media print {
+  .title {
+    margin: 10px 0px;
+    padding: 10px 15px;
+    border-radius: 0;
+    font-size: 14px;
+    box-shadow: none;
+    page-break-after: avoid;
+  }
+
+  .tableContainer {
+    max-height: none !important;
+    overflow-y: visible !important;
+    overflow-x: visible !important;
+    width: 100%;
+    position: relative;
+    margin-bottom: 10px;
+    page-break-inside: avoid;
+  }
+
+  .table {
+    font-size: 9px;
+    width: 100%;
+    border-collapse: collapse;
+    page-break-inside: auto;
+  }
+
+  .table td,
+  .table th {
+    border: 0.5px solid var(--border-color-light);
+    text-align: right;
+    padding: 4px 3px;
+    font-weight: 400;
+    font-size: 9px;
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+
+  .table thead {
+    position: static !important;
+    background: #fff;
+    z-index: 1;
+    display: table-header-group;
+  }
+
+  .table thead td {
+    text-align: center;
+    font-weight: 600;
+    font-size: 8px;
+    background: #f5f5f5;
+    padding: 5px 3px;
+  }
+
+  .table tbody tr {
+    page-break-inside: avoid;
+  }
+
+  .table tbody tr:hover {
+    background-color: transparent;
+  }
+
+  /* Оптимизированные ширины колонок для печати */
+  .table td:nth-child(1),
+  .table th:nth-child(1) {
+    width: 3% !important;
+    max-width: 3% !important;
+    min-width: 3% !important;
+    text-align: center;
+  }
+
+  .table td:nth-child(2),
+  .table th:nth-child(2) {
+    text-align: left !important;
+    font-weight: 500;
+    width: 8% !important;
+    min-width: 8% !important;
+    max-width: 8% !important;
+    font-size: 7px;
+  }
+
+  /* Все остальные колонки (доход и расходы) - уменьшенные ширины */
+  .table td:nth-child(3),
+  .table th:nth-child(3),
+  .table td:nth-child(4),
+  .table th:nth-child(4),
+  .table td:nth-child(5),
+  .table th:nth-child(5),
+  .table td:nth-child(6),
+  .table th:nth-child(6),
+  .table td:nth-child(7),
+  .table th:nth-child(7),
+  .table td:nth-child(8),
+  .table th:nth-child(8),
+  .table td:nth-child(9),
+  .table th:nth-child(9),
+  .table td:nth-child(10),
+  .table th:nth-child(10),
+  .table td:nth-child(11),
+  .table th:nth-child(11),
+  .table td:nth-child(12),
+  .table th:nth-child(12),
+  .table td:nth-child(13),
+  .table th:nth-child(13) {
+    width: 7.5% !important;
+    min-width: 7.5% !important;
+    max-width: 7.5% !important;
+    font-size: 8px;
+  }
+
+  .totalRow {
+    font-weight: 700;
+    background: #e8e8e8;
+    page-break-inside: avoid;
+  }
+
+  .totalRow td {
+    font-weight: 700;
+    font-size: 9px;
+  }
+}
+
+.clickable {
+  cursor: pointer;
+  transition: background-color 0.2s;
+  position: relative;
+}
+
+.clickable:hover {
+  background-color: #f0f0f0;
+}
+
+.expenseCell::after {
+  content: '▼';
+  position: absolute;
+  right: 5px;
+  font-size: 10px;
+  opacity: 0.5;
+}
+
+.clickable {
+  user-select: none;
+}
+
+.clickable:hover {
+  background-color: #e8f4fd !important;
+}
+
+

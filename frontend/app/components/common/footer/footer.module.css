@@ -1,0 +1,10 @@
+.box{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.box span{
+    font-weight: 500;
+}

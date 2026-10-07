@@ -1,0 +1,44 @@
+.sectionName{
+    background-color:rgba(228, 227, 226, 0.5);
+    color: red;
+}
+
+.title{
+    text-align: left!important;
+    max-width: 300px!important;
+}
+
+.total{
+    /* background-color: rgb(198, 228, 230); */
+    /* font-size: 400!important; */
+    font-weight: 700!important;
+    color: blue;
+}
+
+.totalTdKol{
+    /* font-size: 14px!important; */
+    font-weight: 700!important;
+    /* color: blue; */
+    text-align: right!important;
+  }
+
+.trRowMain{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.opened{
+    background-color: bisque;
+}
+
+.plus{
+    cursor: pointer;
+}
+
+.clickableRow {
+    cursor: pointer;
+}
+
+.clickableRow:hover {
+    background-color: #f1f5f9;
+}

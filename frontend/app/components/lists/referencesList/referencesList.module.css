@@ -1,0 +1,803 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    user-select: none;
+}
+
+.listHiddenWhileEditing {
+    display: none;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    border: var(--border-width) solid var(--border-color-light);
+    margin-bottom: 10px;
+}
+
+.table td,
+.table th {
+    border-left: var(--border-width-divider) solid var(--border-color-table);
+    text-align: left;
+    padding: 7px 7px;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+/* Стили для обычных строк (не папок) */
+.table tr:not(.folderRow):nth-child(even) {
+    background-color: #fafafa;
+}
+
+.table tr:not(.folderRow):nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Переопределяем для вложенных строк */
+.nestedRow {
+    background-color: #f8f9fa !important;
+}
+
+.nestedRow:nth-child(even) {
+    background-color: #f5f5f5 !important;
+}
+
+/* Стили для вложенных папок - используем более специфичный селектор */
+tr.nestedRow.folderRow {
+    background-color: #f0f4f8 !important;
+    border-left: 4px solid #6b7280 !important;
+}
+
+tr.nestedRow.folderRow:hover {
+    background-color: #f8fafc !important;
+    border-left: 4px solid #4b5563 !important;
+}
+
+tr.nestedRow.folderRow:nth-child(even) {
+    background-color: #f1f5f9 !important;
+    border-left: 4px solid #6b7280 !important;
+}
+
+tr.nestedRow.folderRow:nth-child(even):hover {
+    background-color: #f9fafb !important;
+    border-left: 4px solid #4b5563 !important;
+}
+
+.folderRow {
+    font-weight: 600;
+    background-color: #f9fafb !important;
+    border-left: 4px solid #9ca3af !important;
+}
+
+.folderRow:nth-child(even) {
+    background-color: #f3f4f6 !important;
+    border-left: 4px solid #9ca3af !important;
+}
+
+.folderRow:hover {
+    background-color: #f8fafc !important;
+    border-left: 4px solid #6b7280 !important;
+}
+
+.folderRow:nth-child(even):hover {
+    background-color: #f1f5f9 !important;
+    border-left: 4px solid #6b7280 !important;
+}
+
+/* Папки первого уровня — 1С Такси: цвет навигации #FFE699 (255,230,153) */
+tr.rootFolderRow,
+tr.rootFolderRow.folderRow {
+    background-color: #ffe699 !important;
+    border-left: 4px solid #c9a227 !important;
+    color: #262626 !important;
+    text-transform: uppercase;
+}
+
+tr.rootFolderRow:nth-child(even),
+tr.rootFolderRow.folderRow:nth-child(even) {
+    background-color: #ffd966 !important;
+    border-left: 4px solid #c9a227 !important;
+}
+
+tr.rootFolderRow:hover,
+tr.rootFolderRow.folderRow:hover {
+    background-color: #ffd966 !important;
+    border-left: 4px solid #b8960c !important;
+}
+
+tr.rootFolderRow:nth-child(even):hover,
+tr.rootFolderRow.folderRow:nth-child(even):hover {
+    background-color: #f5c842 !important;
+    border-left: 4px solid #b8960c !important;
+}
+
+/* Папки второго уровня — молочный */
+tr.nestedRow.secondLevelFolderRow,
+tr.secondLevelFolderRow.folderRow {
+    background-color: #faf6f0 !important;
+    border-left: 4px solid #d8cfc0 !important;
+    color: #262626 !important;
+}
+
+tr.nestedRow.secondLevelFolderRow:nth-child(even),
+tr.secondLevelFolderRow.folderRow:nth-child(even) {
+    background-color: #f5f0e8 !important;
+    border-left: 4px solid #d8cfc0 !important;
+}
+
+tr.nestedRow.secondLevelFolderRow:hover,
+tr.secondLevelFolderRow.folderRow:hover {
+    background-color: #f5f0e8 !important;
+    border-left: 4px solid #c9beb0 !important;
+}
+
+tr.nestedRow.secondLevelFolderRow:nth-child(even):hover,
+tr.secondLevelFolderRow.folderRow:nth-child(even):hover {
+    background-color: #efe9df !important;
+    border-left: 4px solid #c9beb0 !important;
+}
+
+.table tr {
+    margin: 2px 0;
+    border: var(--border-width-divider) solid var(--border-color-table);
+}
+
+.table tr:hover {
+    background-color: #e9ecef !important;
+    border: 1px solid green;
+    border-top: 2px solid #3b82f6 !important;
+    border-bottom: 2px solid #3b82f6 !important;
+}
+
+.table th {
+    font-weight: bold;
+}
+
+.table thead,
+.table tbody tr {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.table thead {
+    width: calc(100% - 1.1em);
+    position: relative;
+}
+
+.table tbody {
+    display: block;
+    max-height: 600px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.table thead th:last-child::after {
+    content: ' ';
+    position: absolute;
+    width: 1.1em;
+    height: 40px;
+    right: -1.1em;
+    top: 0;
+}
+
+.iconColumn {
+    width: 80px;
+    text-align: center;
+}
+
+.folderIcon {
+    width: 20px;
+    height: 20px;
+    fill: #3b82f6;
+}
+
+.itemIcon {
+    width: 20px;
+    height: 20px;
+    fill: #6b7280;
+}
+
+.rowId{
+    width: 80px;
+}
+
+.enterpriseIdColumn{
+    width: 100px;
+    text-align: center;
+}
+
+.types{
+    width: 150px;
+}
+
+/* Специфичные стили для колонок справочников */
+.types.unit {
+    width: 80px;
+    min-width: 80px;
+}
+
+.types.countInBox {
+    width: 80px;
+    min-width: 80px;
+    text-align: center;
+}
+
+.types.firstPrice {
+    width: 100px;
+    min-width: 100px;
+    text-align: right;
+}
+
+.types.boxPrice {
+    width: 120px;
+    min-width: 120px;
+    text-align: right;
+}
+
+.types.carModel {
+    width: 120px;
+    min-width: 120px;
+    text-align: center;
+}
+
+.types.typeSection {
+    width: 150px;
+    min-width: 150px;
+    text-align: center;
+}
+
+.types.typeTMZ {
+    width: 120px;
+    min-width: 120px;
+    text-align: center;
+}
+
+.types.shortName {
+    width: 140px;
+    min-width: 120px;
+}
+
+.types.size,
+.types.color,
+.types.manufacture {
+    width: 90px;
+    min-width: 80px;
+}
+
+.types.productionType {
+    width: 150px;
+    min-width: 150px;
+    text-align: center;
+}
+
+.types.productMetr {
+    width: 110px;
+    min-width: 110px;
+    text-align: right;
+}
+
+/* Стили для колонок партнеров */
+.types.typePartners {
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.types.clientForSectionId {
+    width: 150px;
+    min-width: 150px;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.types.isApartment {
+    width: 100px;
+    min-width: 100px;
+    text-align: center;
+}
+
+.types.apartmentNumber {
+    width: 120px;
+    min-width: 120px;
+    text-align: center;
+}
+
+.types.apartmentBlock {
+    width: 120px;
+    min-width: 120px;
+    text-align: center;
+}
+
+.types.apartmentFloor {
+    width: 100px;
+    min-width: 100px;
+    text-align: center;
+}
+
+.types.apartmentArea {
+    width: 120px;
+    min-width: 120px;
+    text-align: right;
+}
+
+.types.inn {
+    width: 130px;
+    min-width: 130px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.types.phone {
+    width: 140px;
+    min-width: 140px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.types.telegramId {
+    width: 140px;
+    min-width: 140px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.types.location {
+    width: 200px;
+    min-width: 180px;
+    max-width: 260px;
+    vertical-align: top;
+    text-align: left;
+    white-space: normal;
+    user-select: text;
+}
+
+.locationWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+    user-select: text !important;
+}
+
+.locationCoords {
+    font-family: ui-monospace, monospace;
+    font-size: 12px;
+    line-height: 1.3;
+    user-select: text;
+}
+
+.locationMapLink {
+    font-family: ui-monospace, monospace;
+    font-size: 12px;
+    line-height: 1.3;
+    color: #2563eb;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.locationMapLink:hover {
+    color: #1d4ed8;
+}
+
+.locationRaw {
+    display: block;
+    font-size: 10px;
+    color: #666;
+    word-break: break-all;
+    max-height: 36px;
+    overflow: hidden;
+    user-select: text;
+}
+
+.locationCopyBtn {
+    font-size: 11px;
+    padding: 2px 8px;
+    cursor: pointer;
+    border: var(--border-width) solid var(--border-color-light);
+    border-radius: 4px;
+    background: #f8f9fa;
+}
+
+.locationCopyBtn:hover {
+    background: #e9ecef;
+}
+
+.name{
+    width: 50%;
+    min-width: 300px;
+    max-width: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Партнёры: без max-width:50% — иначе при table-layout:fixed и многих колонках «Номи» визуально пропадал */
+.namePartners {
+    width: auto;
+    min-width: 280px;
+    max-width: none;
+}
+
+.rowAction{
+    width: 90px;
+}
+
+.comment {
+    width: 200px;
+    min-width: 200px;
+    max-width: 300px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.enterpriseColumn {
+    width: 150px;
+    min-width: 150px;
+    max-width: 200px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.trRow{
+    cursor: pointer;
+}
+
+/* Курсор pointer для папок, default для обычных элементов */
+.table tr.folderRow {
+    cursor: pointer;
+}
+
+.table tr:not(.folderRow) {
+    cursor: default;
+}
+
+/* Hover эффекты для обычных элементов (не папок) */
+.table tr:not(.folderRow):hover {
+    background-color: #f5f5f5 !important;
+}
+
+.btns{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5px;
+}
+
+.deleted{
+    color: red;
+    text-decoration: line-through;
+}
+
+.saved{
+    color: #000;
+    background-color: rgba(236, 236, 11, 0.3)!important;
+}
+
+/* Последняя строка, открытая на редактирование (двойной клик) */
+.table tr.lastActive {
+    background-color: rgba(254, 243, 199, 0.95) !important;
+    border-left: 4px solid #f59e0b !important;
+    outline: 1px solid rgba(245, 158, 11, 0.55);
+    outline-offset: -1px;
+    position: relative;
+    z-index: 1;
+}
+
+.table tr.lastActive.folderRow,
+.table tr.lastActive.nestedRow {
+    background-color: rgba(254, 243, 199, 0.95) !important;
+    border-left: 4px solid #f59e0b !important;
+}
+
+.table tr.lastActive:hover {
+    background-color: rgba(253, 230, 138, 0.98) !important;
+    border: var(--border-width-divider) solid var(--border-color-table) !important;
+    border-left: 4px solid #d97706 !important;
+    border-top: 2px solid #f59e0b !important;
+    border-bottom: 2px solid #f59e0b !important;
+    outline: 1px solid rgba(217, 119, 6, 0.65);
+}
+
+.error{
+    color: #fff;
+    background-color: red!important;
+}
+
+.icoTrash{
+    width: 20px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.icoDate{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.icoShow {
+    width: 20px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.icoTrash:hover{
+    fill: red;
+}
+
+.icoTrash.deleted{
+    fill: red;
+}
+
+.icoShow:hover{
+    fill: blue;
+}
+
+.icoDate:hover{
+    fill: blue;
+}
+
+.title{
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.newElement{
+    margin-bottom: 20px;
+}
+
+
+.clickable {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.expandIcon {
+  display: flex;
+  align-items: center;
+}
+
+.folderOpenIcon {
+    width: 20px;
+    height: 20px;
+    fill: #3b82f6;
+}
+
+.folderPlusIcon {
+    width: 20px;
+    height: 20px;
+    fill: #3b82f6;
+}
+
+/* Стиль для папок без дочерних элементов */
+.folderIcon.noChildren {
+    fill: #10b981;
+}
+
+/* Стили для колонки изображений */
+.imageColumn {
+    width: 60px;
+    min-width: 60px;
+    text-align: center;
+    padding: 4px !important;
+}
+
+.imageColumnSortable {
+    cursor: pointer;
+    user-select: none;
+}
+
+.imageColumnSortable:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.imageColumnSorted {
+    font-weight: 600;
+}
+
+.productImageThumb {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    cursor: zoom-in;
+}
+
+.imagePlaceholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #f3f4f6;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #9ca3af;
+    margin: 0 auto;
+}
+
+.imagePlaceholderBroken {
+    background-color: #fef3c7;
+    color: #b45309;
+    border: 1px dashed #f59e0b;
+}
+
+.brokenImageIcon {
+    width: 22px;
+    height: 22px;
+}
+
+.searchToolbar {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    margin: 0 0 12px;
+    padding: 10px 12px;
+    background: #f8fafc;
+    border: var(--border-width) solid var(--border-color-light);
+    border-radius: 6px;
+}
+
+.searchInputRow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 12px;
+}
+
+.searchInput {
+    padding: 10px 14px;
+    border: var(--border-width) solid var(--border-color-light);
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.searchInputName {
+    flex: 1;
+    min-width: 200px;
+}
+
+.searchInputArticle {
+    flex: 0 0 auto;
+    width: 11ch;
+    min-width: 11ch;
+    max-width: 11ch;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.searchInput:focus {
+    border-color: var(--border-color-focus);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.searchMeta {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.dictionaryFilterRow {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(180px, 1fr));
+    gap: 8px 10px;
+}
+
+.dictionaryFilterItem {
+    min-width: 0;
+}
+
+.dictionaryFilterItem :global(.customSelect) {
+    min-height: 34px;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.dictionaryFilterItem :global(.searchInput) {
+    font-size: 0.875rem;
+    line-height: 1.2;
+}
+
+.dictionaryFilterItem :global(.arrow) {
+    margin-left: 8px;
+    font-size: 10px;
+}
+
+.dictionaryFilterItem :global(.option),
+.dictionaryFilterItem :global(.noResults) {
+    font-size: 0.875rem;
+    padding: 8px 10px;
+}
+
+.dictionaryFilterItem :global(.dropdown) {
+    margin-top: 2px;
+}
+
+.dictionaryFilterItem :global(.defaultSelected) {
+    color: #6b7280;
+    font-style: normal;
+}
+
+@media (max-width: 1280px) {
+    .dictionaryFilterRow {
+        grid-template-columns: repeat(2, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .dictionaryFilterRow {
+        grid-template-columns: 1fr;
+    }
+}
+
+.searchEmpty {
+    padding: 24px;
+    text-align: center;
+    color: #64748b;
+    font-size: 15px;
+}
+
+.exportToolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 0 12px;
+    padding: 10px 12px;
+    background: #f8fafc;
+    border: var(--border-width) solid var(--border-color-light);
+    border-radius: 6px;
+}
+
+.exportBtn {
+    padding: 8px 14px;
+    border: var(--border-width) solid var(--border-color);
+    border-radius: 4px;
+    background: #fff;
+    color: #334155;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.exportBtn:hover {
+    background: #f1f5f9;
+    border-color: #64748b;
+}
+
+.exportBtn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.importedBadge {
+    display: inline-block;
+    font-size: 12px;
+    color: #0f766e;
+    font-weight: 600;
+}

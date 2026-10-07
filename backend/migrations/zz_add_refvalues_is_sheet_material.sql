@@ -1,0 +1,2 @@
+ALTER TABLE refvalues
+    ADD COLUMN IF NOT EXISTS "isSheetMaterial" BOOLEAN NOT NULL DEFAULT false;

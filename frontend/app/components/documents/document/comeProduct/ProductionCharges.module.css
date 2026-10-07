@@ -1,0 +1,147 @@
+.chargesSection {
+  margin-top: 24px;
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+.sectionHeader {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sectionTitle {
+  margin: 0 0 4px 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.sectionSubtitle {
+  font-size: 13px;
+  color: #7f8c8d;
+  font-weight: 400;
+}
+
+.chargesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.chargeCard {
+  background: white;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.chargeCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ecf0f1;
+}
+
+.cardIcon {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.cardTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: #34495e;
+}
+
+.cardContent {
+  margin-bottom: 12px;
+  min-height: 60px;
+}
+
+.cardPercent {
+  font-size: 13px;
+  color: #7f8c8d;
+  margin-bottom: 12px;
+  padding: 8px;
+  background-color: #ecf0f1;
+  border-radius: 6px;
+  text-align: center;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardAmount {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 6px;
+  padding-top: 12px;
+  border-top: 1px solid #ecf0f1;
+}
+
+.amountValue {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.amountCurrency {
+  font-size: 14px;
+  font-weight: 500;
+  color: #95a5a6;
+}
+
+.totalCharges {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.totalLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  color: white;
+}
+
+.totalIcon {
+  font-size: 24px;
+}
+
+.totalAmount {
+  font-size: 26px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.totalCurrency {
+  font-size: 18px;
+  font-weight: 600;
+  opacity: 0.9;
+}

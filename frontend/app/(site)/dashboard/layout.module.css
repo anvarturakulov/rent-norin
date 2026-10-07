@@ -1,0 +1,37 @@
+.layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    width: 100%;
+    height: 100%;
+    background-color: #E5E7EB;
+    padding: 10px;
+    transition: grid-template-columns 0.3s ease;
+}
+
+.layout.sidebarCollapsed {
+    grid-template-columns: 80px 1fr;
+}
+
+.layout.sidebarExpanded {
+    grid-template-columns: 280px 1fr;
+}
+
+.dashboard_main {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.dashboard_content {
+    position: relative;
+    flex: 1;
+    min-height: 0;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.dashboard_contentWithTaskbar {
+    padding-bottom: 12px;
+}

@@ -1,0 +1,86 @@
+.container {
+    width: 100%;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.noData {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 16px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table thead {
+    background-color: #f5f5f5;
+}
+
+.table th {
+    padding: 12px 8px;
+    text-align: center;
+    border: 1px solid var(--border-color-light);
+    font-weight: 600;
+    font-size: 12px;
+    vertical-align: middle;
+    width: calc(100% / 7);
+}
+
+.table td {
+    padding: 10px 8px;
+    text-align: right;
+    border: 1px solid var(--border-color-light);
+    vertical-align: middle;
+    width: calc(100% / 7);
+    font-weight: 400;
+}
+
+.enterpriseColumn {
+    text-align: left !important;
+    font-weight: 400;
+}
+
+.numberColumn {
+    text-align: right;
+    font-weight: 400;
+}
+
+.totalRow {
+    background-color: #f9f9f9;
+    font-weight: 600;
+}
+
+.totalRow td {
+    border-top: 2px solid #333;
+}
+
+.totalColumn {
+    font-weight: 600;
+}
+
+.clickable {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.clickable:hover {
+    background-color: #f0f0f0;
+}
+
+@media print {
+    .container {
+        padding: 0;
+    }
+    
+    .table {
+        box-shadow: none;
+    }
+}
+

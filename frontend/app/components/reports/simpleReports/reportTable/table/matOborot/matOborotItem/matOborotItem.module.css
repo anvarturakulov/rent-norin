@@ -1,0 +1,93 @@
+.sectionName{
+    background-color:blanchedalmond;
+}
+
+.number{
+    width: 50px;
+    text-align: center!important;
+}
+
+.title{
+    text-align: left!important;
+    max-width: 300px!important;
+    padding-left: 10px!important;
+}
+
+.titleClickable {
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+}
+
+.titleClickable:hover {
+    text-decoration-color: currentColor;
+}
+
+.total{
+    background-color: rgb(198, 228, 230);
+    font-size: 400!important;
+}
+
+.totalTd {
+    text-align: right;
+}
+
+.groupRow {
+    background-color: #f0f4f8;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.groupTitle {
+    max-width: none !important;
+    vertical-align: middle;
+    font-weight: 600;
+}
+
+.groupIdPrefix {
+    color: #475569;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    user-select: all;
+}
+
+.groupFolderName {
+    font-weight: 600;
+}
+
+.groupRow:hover {
+    background-color: #e2eaf2;
+}
+
+.expandGlyph {
+    display: inline-block;
+    min-width: 1.1em;
+    font-weight: 700;
+    user-select: none;
+}
+
+.collapsedHidden {
+    display: none;
+}
+
+.clickableCell {
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: background 0.12s ease, text-decoration-color 0.12s ease;
+}
+
+.clickableCell:hover {
+    background: #eff6ff;
+    text-decoration-color: #3b82f6;
+}
+
+@media print {
+    .matOborotItemBody .collapsedHidden {
+        display: table-row !important;
+    }
+
+    .groupRow {
+        cursor: default;
+    }
+}

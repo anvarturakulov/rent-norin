@@ -1,0 +1,48 @@
+.boxItem{
+  border: 1px solid var(--border-color-light);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.titleBox{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.title{
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.icon{
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.value{
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.comment{
+  font-size: 14px;
+  color: #666;
+  gap: 5px;
+  display: flex;
+}
+
+.negative{
+  color: #FF0000;
+}
+
+.positive{
+    color: green;
+}

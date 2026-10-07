@@ -1,0 +1,473 @@
+.tmzNameHint {
+    font-size: 11px;
+    color: #6b7280;
+    margin-top: -4px;
+    margin-bottom: 8px;
+    font-style: italic;
+}
+
+.phoneRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    align-items: flex-end;
+}
+
+.checkboxRow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    align-items: flex-end;
+}
+
+.personTypeRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    align-items: flex-end;
+}
+
+.importedFromExcelNote {
+    margin: 0 0 10px;
+    font-size: 13px;
+    color: #0f766e;
+    font-weight: 600;
+}
+
+.tripleRow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    align-items: flex-end;
+}
+
+.referenceBox{
+    /* background-color: #eff5e3; */
+    padding: 30px;
+    position: relative;
+}
+
+.boxTMZ{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 20px;
+    transition: all 5s;
+    /* display: block; */
+}
+
+/** Селекты реквизитов ТМЗ — на всю ширину ячейки сетки */
+.tmzDictSelect {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    justify-self: stretch;
+}
+
+.boxTMZWithPrice{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-start;
+    gap: 20px;
+    transition: all 5s;
+}
+
+/** Отступ блока цен после вкладок ТМЗ */
+.tmzPriceBlock{
+    margin-top: 20px;
+}
+
+.boxClose{
+    transition: .3s;
+    display: none;
+}
+
+.input {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 10px 15px;
+    min-height: 44px;
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 10px 0;
+    width: 100%;
+    border: var(--border-width) solid var(--border-color-light);
+    border-radius: var(--border-radius-field);
+    transition: border-color 0.2s ease;
+    /* background: #f5f5f5; */
+}
+
+
+
+.input:focus {
+    outline: none;
+    border-color: var(--border-color-focus);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.input:disabled {
+    background-color: #f3f4f6;
+    color: #6b7280;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.button{
+    display: inline-block;
+}
+
+.boxBtn{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: left;
+}
+
+.btn{
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+    width: 40px;
+    color: red;
+    font-weight: 700;
+}
+
+.select{
+    box-sizing: border-box;
+    display: block;
+    padding: 10px 5px;
+    min-height: 44px;
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 10px 0;
+    width: 100%;
+    border: var(--border-width) solid var(--border-color-light);
+    border-radius: var(--border-radius-field);
+    transition: border-color 0.2s ease;
+    /* background: #f5f5f5; */
+    /* background-color: blue; */
+    background-color: #fff;
+}
+
+.select:focus {
+    outline: none;
+    border-color: var(--border-color-focus);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.select:disabled {
+    background-color: #f3f4f6;
+    color: #6b7280;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.label {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.checkBoxs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.priceBox{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.priceButton{
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.priceItemBox{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 20px;
+    /* justify-content: center; */
+}
+
+.icoDate{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.icoDate:hover{
+    fill: blue;
+}
+
+.folderBox{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: flex-end;
+}
+
+.imageUploadSection {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    padding: 16px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: var(--border-width) solid var(--border-color-light);
+}
+
+.imageUpload {
+    width: 100%;
+}
+
+
+.closeIco{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+/* Стили для кнопки калькуляций */
+.calculationsButtonContainer {
+    grid-column: 1 / -1; /* Занимает всю ширину сетки */
+    margin-top: 10px;
+}
+
+.calculationsButton {
+    background: #3B82F6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    box-shadow: 0 2px 6px rgba(59, 130, 246, 0.3);
+}
+
+.calculationsButton:hover {
+    background: #2563EB;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.4);
+}
+
+.calculationsButton:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(59, 130, 246, 0.3);
+}
+
+
+.boxAppartments{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.articleFieldRow {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    align-items: end;
+    width: 100%;
+}
+
+.articleGenerateBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #e5e7eb;
+    color: #374151;
+    border: var(--border-width) solid var(--border-color-light);
+    border-radius: var(--border-radius-field);
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    margin-bottom: 13px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.articleGenerateBtnIcon {
+    width: 20px;
+    height: 20px;
+}
+
+.articleGenerateBtn:hover:not(:disabled) {
+    background: #d1d5db;
+}
+
+.articleGenerateBtn:disabled {
+    background-color: #f3f4f6;
+    color: #6b7280;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Список производственных цехов для материала — три колонки */
+.productionDeptList {
+    columns: 3;
+    column-gap: 20px;
+    max-height: 280px;
+    overflow-y: auto;
+    border: var(--border-width) solid var(--border-color-light);
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.productionDeptListReadOnly {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.productionDeptItem {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    min-width: 0;
+    cursor: pointer;
+}
+
+.productionDeptItemReadOnly {
+    cursor: default;
+}
+
+.productionDeptItem label {
+    cursor: inherit;
+    user-select: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.productionDeptEmpty {
+    column-span: all;
+    color: #888;
+}
+
+/* Стили для секции периодических цен */
+.priceSection {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* gap: 10px; */
+    /* margin-top: 10px; */
+    /* position: relative; */
+    /* z-index: 1; */
+    /* grid-column: 1 / -1;  */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+}
+
+.pereodicButton {
+    background: #e5e7eb;
+    color: #374151;
+    border: var(--border-width) solid var(--border-color-light);
+    border-radius: var(--border-radius-field);
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+    position: relative;
+    z-index: 2;
+}
+
+.pereodicButton:hover:not(:disabled) {
+    background: #d1d5db;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.pereodicButton:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.pereodicButton:disabled {
+    background-color: #d1d5db;
+    color: #6b7280;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.catalogWebsiteSection {
+    margin-top: 8px;
+    padding: 16px;
+    border: var(--border-width) solid var(--border-color-light);
+    border-radius: 10px;
+    background: #f9fafb;
+}
+
+.productGalleryRow {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+@media (max-width: 900px) {
+    .productGalleryRow {
+        grid-template-columns: 1fr;
+    }
+}
+
+.websiteDescLabel {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 12px 0 6px;
+    color: #374151;
+}
+
+.websiteTextarea {
+    composes: input;
+    min-height: 120px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.osmLink {
+    display: inline-block;
+    margin: 0 0 12px;
+    font-size: 14px;
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+.osmLink:hover {
+    color: #1d4ed8;
+}

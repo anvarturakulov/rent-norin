@@ -1,0 +1,487 @@
+.valuesBox {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    /* margin-top: 10px; */
+}
+
+.titleBox{
+    border-bottom: var(--border-width-divider) solid var(--border-color-table);
+    padding-bottom: 10px;
+}
+
+.notColor {
+    color: transparent;
+}
+
+.ico {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    color: blue;
+    fill: red;
+}
+
+.checkBoxs{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    width: 100%;
+    padding: 0px 0px;
+    margin-top: 10px;
+}
+
+.partnersBox, .analiticBox{
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.add{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    color: blue;
+    fill: red;
+}
+
+.btnLoad {
+    width: 100%;
+    height: 50px;
+    font-weight: 600;
+    background-color: #fff;
+    cursor: pointer;
+    margin: 10px 0px;
+}
+
+
+.infoBox{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 5px;
+}
+
+.dataBox{
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    gap: 10px
+}
+
+.dataBoxDates {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.transferInfoCol {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+.rentTariffTypeBox {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: left;
+}
+
+.rentTariffTypeLabel {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+}
+
+.rentTariffTypeOptions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.rentTariffTypeOption {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.rentTariffTypeOption input {
+    margin: 0;
+}
+
+
+.nameBox select {
+    margin-top: 6px;
+    display: inline-block;
+    padding: 5px;
+    font-size: 14px;
+    line-height: 16px;
+    border: var(--border-width) solid var(--border-color-light);
+    border-radius: var(--border-radius-field);
+    width: 100%;
+}
+
+.linkedSelectBox {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6px;
+    text-align: left;
+}
+
+.linkedSelectLabel {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    margin-top: 6px;
+}
+
+.linkedSearchInput,
+.linkedSelect {
+    width: 100%;
+    min-height: 40px;
+    padding: 8px 12px;
+    border: var(--border-width) solid var(--border-color-light);
+    border-radius: var(--border-radius-field);
+    background-color: #fff;
+    font-size: 15px;
+    line-height: 20px;
+    border-radius: var(--border-radius-field);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+}
+
+.linkedSearchInput::placeholder {
+    font-size: 12px;
+    color: #8c8c8c;
+}
+
+.linkedSearchInput:focus,
+.linkedSelect:focus {
+    border-color: var(--border-color-focus);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.linkedSelect:disabled {
+    background-color: #f6f6f6;
+    color: #8a8a8a;
+    cursor: not-allowed;
+}
+
+.fillFromOrderBtn {
+    margin-top: 8px;
+    padding: 8px 14px;
+    border: 1px solid var(--border-color-light);
+    border-radius: var(--border-radius-field);
+    background: #f8fafc;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.fillFromOrderBtn:hover:not(:disabled) {
+    background: #eef2ff;
+    border-color: #a5b4fc;
+}
+
+.fillFromOrderBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.dataBoxForOrder{
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    gap: 10px
+}
+
+.deleviryBox {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.cashBox{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.deliveryBox{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.deliveryBoxTwo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.debtBox{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+}
+
+.toolsPaymentSection {
+    margin-top: 20px;
+    padding: 14px 12px;
+    display: grid;
+    gap: 10px;
+    background-color: #f4f7fb;
+    border: var(--border-width) solid var(--border-color-light);
+    border-radius: 8px;
+}
+
+.toolsPaymentTitleBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 0 0 4px;
+    padding-bottom: 10px;
+    border-bottom: var(--border-width) solid var(--border-color-light);
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+
+.toolsPaymentTitle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.toolsPaymentTitleText {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+
+.toolsPaymentIcoCart {
+    width: 25px;
+    height: 25px;
+}
+
+.invoiceImagesRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.invoiceThumbCard {
+    position: relative;
+    width: 116px;
+    height: 116px;
+    border-radius: 8px;
+    border: var(--border-width) solid var(--border-color-light);
+    background-color: #f7f7f7;
+    overflow: hidden;
+    flex: 0 0 auto;
+}
+
+.invoiceThumbImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: zoom-in;
+    display: block;
+}
+
+.invoiceThumbRemove {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 22px;
+    height: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.55);
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.invoiceThumbRemove:hover:not(:disabled) {
+    background-color: rgba(220, 53, 69, 0.9);
+}
+
+.invoiceThumbRemove:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.invoiceAddCard {
+    position: relative;
+    width: 116px;
+    height: 116px;
+    border-radius: 8px;
+    border: 2px dashed var(--border-color-light, #c7c7c7);
+    background-color: #fafbff;
+    color: #6b7bb5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex: 0 0 auto;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.invoicePasteBtn {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: var(--border-width) solid #c7d2ff;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #6b7bb5;
+    cursor: pointer;
+}
+
+.invoicePasteBtn:hover {
+    background-color: #e7edff;
+    border-color: #9cb4ff;
+}
+
+.invoiceAddCard:hover:not(.invoiceAddCardDisabled),
+.invoiceAddCard:focus-visible {
+    border-color: #9cb4ff;
+    background-color: #f0f4ff;
+    outline: none;
+}
+
+.invoiceAddCardDisabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.invoiceAddSpinner {
+    width: 22px;
+    height: 22px;
+    border: 3px solid #c7d2ff;
+    border-top-color: #6b7bb5;
+    border-radius: 50%;
+    animation: invoiceSpin 0.8s linear infinite;
+}
+
+@keyframes invoiceSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hiddenInput {
+    display: none;
+}
+
+.invoiceModalOverlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.invoiceModalContent {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.invoiceModalImage {
+    max-width: 100%;
+    max-height: 80vh;
+    display: block;
+}
+
+.invoiceModalClose {
+    position: absolute;
+    top: 4px;
+    right: 8px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Стили для двух таблиц */
+.dualTableContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.tableSection {
+    border: var(--border-width) solid var(--border-color-light);
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fafafa;
+}
+
+.tableSection h3 {
+    margin: 0 0 10px 0;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    text-align: left;
+}
+
+.tableHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.calculateButton {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.calculateButton:hover {
+    background-color: #218838;
+}
+
+.calculateButton:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}

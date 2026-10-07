@@ -1,0 +1,104 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    user-select: none;
+}
+
+.title{
+    margin-bottom: 10px;
+    font-size: 14px!important;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    border: var(--border-width) solid var(--border-color-light);
+    margin-bottom: 10px;
+    padding-right: 25px;
+}
+
+.table td,
+.table th {
+    border: var(--border-width-divider) solid var(--border-color-table);
+    text-align: left;
+    padding: 5px 7px;
+    font-size: 13px;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+.table tr {
+    margin: 10px 0px;
+    border: 2px solid #4e4d4d;
+    display: grid!important;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.table tr:hover {
+    background-color: bisque;
+}
+
+.table th {
+    font-weight: bold;
+}
+
+.table thead,
+.table tbody tr {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.table tbody {
+    display: table-row-group;
+    max-height: none;
+    overflow: visible;
+}
+
+.deleted{
+    background-color: red;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+.documentType{
+    background: yellow;
+}
+
+.proveden {
+    background-color: green;
+    color: #fff;
+}
+
+.saved{
+    color: #000;
+    background-color: rgba(236, 236, 11, 0.3)!important;
+}
+
+.error{
+    color: #fff;
+    background-color: red!important;
+}
+
+
+.title{
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.newElement{
+    margin-bottom: 20px;
+}
+
+.receiveBtn{
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

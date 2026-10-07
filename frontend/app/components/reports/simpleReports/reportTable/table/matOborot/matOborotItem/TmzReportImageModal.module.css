@@ -1,0 +1,230 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(15, 23, 42, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+}
+
+.modal {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 12px;
+  width: min(540px, calc(100vw - 1.5rem));
+  max-height: min(88vh, 620px);
+  overflow: hidden;
+  box-shadow:
+    0 4px 6px -1px rgba(15, 23, 42, 0.08),
+    0 24px 48px -12px rgba(15, 23, 42, 0.28);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+.head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.75rem 0.9rem 0.4rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #0f172a;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+.closeBtn {
+  flex-shrink: 0;
+  border: none;
+  background: #f1f5f9;
+  border-radius: 8px;
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #64748b;
+  padding: 0.25rem 0.5rem;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.closeBtn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.subtitle {
+  margin: 0;
+  padding: 0 0.9rem 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+  padding: 0 0.85rem 0.9rem;
+}
+
+.slot {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+}
+
+.slotFrame {
+  width: 100%;
+  aspect-ratio: 1;
+  max-height: 152px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid var(--border-color-light);
+  box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.slotOpenBtn {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  cursor: zoom-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.slotOpenBtn:hover {
+  background: rgba(241, 245, 249, 0.65);
+  box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.35);
+}
+
+.slotOpenBtn:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.slotImg {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.slotEmpty,
+.slotPlaceholder {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #cbd5e1;
+  user-select: none;
+}
+
+.caption {
+  margin-top: 0.32rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #64748b;
+  letter-spacing: 0.04em;
+}
+
+/* Полноэкранный просмотр поверх первой модалки */
+.lightboxOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10001;
+  background: rgba(2, 6, 23, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: tmzLbFade 0.18s ease-out;
+}
+
+@keyframes tmzLbFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.lightboxInner {
+  position: relative;
+  max-width: min(96vw, 1200px);
+  max-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightboxImg {
+  max-width: 96vw;
+  max-height: 92vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.lightboxClose {
+  position: absolute;
+  top: -0.25rem;
+  right: -0.25rem;
+  transform: translate(20%, -20%);
+  z-index: 1;
+  border: none;
+  background: rgba(255, 255, 255, 0.95);
+  color: #334155;
+  border-radius: 999px;
+  width: 2.25rem;
+  height: 2.25rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.lightboxClose:hover {
+  background: #fff;
+  transform: translate(20%, -20%) scale(1.05);
+}
+
+@media (max-width: 480px) {
+  .lightboxClose {
+    top: 0.5rem;
+    right: 0.5rem;
+    transform: none;
+  }
+
+  .lightboxClose:hover {
+    transform: none;
+  }
+}

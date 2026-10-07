@@ -1,0 +1,97 @@
+.container {
+    padding: 10px 20px;
+    /* margin: 0 auto; */
+    width: 100%;
+    /* max-width: 1300px; */
+    background-color: #F3F4F6;
+}
+
+.itemsBox{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.itemsBoxDost{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.savdoBox{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.containerBottom {
+    display: grid;
+    grid-template-columns: 0.75fr 0.25fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.box{
+    border: 0.5px dotted #000;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.13);
+}
+
+.bottomBox{
+    margin-top: 20px;
+}
+
+.row{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 10px;
+    padding: 5px;
+    border-bottom: 0.5px dotted #000;
+}
+
+.value {
+    text-align: right;
+}
+
+
+.titleD{
+    margin: 20px 0px;
+    font-weight: 700;
+    background: green;
+    /* background-color: #EFEFEF; */
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.table td,
+.table th {
+    border: 0.5px dotted var(--border-color-light);
+    text-align: right;
+    padding: 7px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.table thead td {
+    text-align: center;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.box h2{
+    margin: 10px 0 0;
+    font-weight: 600;
+}
+
+.tbodyS td{
+    width: 28%;
+}
+
+.savdoBox h2{
+    background-color: rgb(201, 219, 201);
+    /* color: #fff; */
+    /* padding-left: 15px; */
+    padding: 5px 0px 5px 15px;
+}
+

@@ -1,0 +1,1 @@
+ALTER TABLE doctableitems ADD COLUMN IF NOT EXISTS "rentHours" FLOAT;

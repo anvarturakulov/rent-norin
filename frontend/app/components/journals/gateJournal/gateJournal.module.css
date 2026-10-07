@@ -1,0 +1,347 @@
+.container {
+    /* max-width: 1200px; */
+    width: 100%;
+    margin: 0 auto;
+    user-select: none;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    border: var(--border-width) solid var(--border-color-light);
+    margin-bottom: 10px;
+}
+
+.table td,
+.table th {
+    border-left: var(--border-width-divider) solid var(--border-color-table);
+    text-align: left;
+    padding: 10px 7px;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f5f5f5;
+    
+}
+
+.table tr {
+    margin: 5px 0;
+    border: var(--border-width-divider) solid var(--border-color-table);
+}
+
+
+
+.table tr:hover {
+    margin: 5px 0;
+    border: var(--border-width) solid var(--border-color-focus);
+    /* background-color: #f5f5f5; */
+}
+
+.table th {
+    font-weight: 500;
+}
+
+.table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: #f0f0f0;
+    box-shadow: 0 1px 0 #e6e6e6;
+}
+
+.table thead th.red {
+    background-color: yellow;
+    color: red;
+}
+
+.rowId{
+    width: 80px;
+}
+
+.rowDate{
+    width: 150px;
+}
+
+.rowAction{
+    width: 50px;
+}
+
+.rowPlateNumber{
+    width: 120px;
+}
+
+.rowVehicleType{
+    width: 100px;
+}
+
+
+.rowGateAction{
+    width: 100px;
+}
+
+.rowDocument{
+    width: 120px;
+}
+
+.rowReason{
+    width: 150px;
+}
+
+.rowCameraIp{
+    width: 120px;
+}
+
+.rowPhoto{
+    width: 120px;
+}
+
+.rowPlatePhoto{
+    width: 120px;
+}
+
+.tdSumma{
+    text-align: right!important;
+}
+
+.trRow{
+    cursor: zoom-in;
+}
+
+.btns{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.deleted{
+    /* background-color: red; */
+    /* color: #fff; */
+    color: red;
+    text-decoration: line-through;
+    font-weight: 700;
+    border-left: 6px solid red!important;
+}
+
+.proveden {
+    /* color: #fff; */
+    /* background-color: #0350f6; */
+    color: #0350f6;
+    font-weight: 500;
+    border-right: 6px solid #0350f6;
+    /* border-right: 1px solid 000; */
+}
+
+.open {
+    border-bottom: 6px solid yellow;
+    /* background-color: yellow; */
+    color: #000;
+    font-weight: 300;
+    text-decoration: wavy;
+}
+
+.error{
+    color: #fff;
+    background-color: red!important;
+}
+
+/* Gate specific styles */
+.opened {
+    border-right: 6px solid green;
+    color: green;
+    font-weight: 500;
+}
+
+.denied {
+    border-right: 6px solid red;
+    color: red;
+    font-weight: 500;
+}
+
+.pending {
+    border-right: 6px solid orange;
+    color: orange;
+    font-weight: 500;
+}
+
+.icoTrash{
+    width: 20px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.icoShow {
+    width: 20px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.icoSave{
+    width: 20px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+
+.icoTrash:hover{
+    fill: red;
+}
+
+.icoShow:hover{
+    fill: blue;
+}
+
+.title{
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.newElement{
+    margin-bottom: 20px;
+}
+
+.red {
+    color: red;
+    background-color: yellow;
+    text-transform: uppercase;
+    text-align: center!important;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    align-items: center;
+}
+
+.label{
+    margin-left: 10px;
+}
+
+.checkboxs{
+    display: grid;
+    grid-template-columns: auto auto auto auto; 
+    gap: 10px;
+}
+
+.button{
+    width: 250px;
+    padding: 5px 10px;
+}
+
+.disabled {
+    display: none;
+}
+
+.checkModal {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+    z-index: 1000;
+  }
+  
+.checkModal td {
+    border: none;
+    padding: 0;
+    vertical-align: top;
+}
+
+.icoPrint {
+    width: 20px;
+    cursor: pointer;
+    margin: 0 auto;
+    fill: #007bff;
+}
+
+.icoPrint:hover {
+    fill: #0056b3;
+    transform: scale(1.1);
+}
+
+.photoThumbnail {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.imagePreview {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: var(--border-width) solid var(--border-color-light);
+}
+
+.photoModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.photoModal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+
+.photoModalClose {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Sorting and filtering styles */
+.sortable {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+.sortable:hover {
+    background-color: #f0f0f0;
+}
+
+.sortIndicator {
+    margin-left: 5px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.refreshButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.refreshButton:hover {
+    background-color: #0056b3;
+}
+
+.refreshButton:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}

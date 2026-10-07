@@ -1,0 +1,615 @@
+.modal {
+    position: relative;
+    background: var(--white);
+    border: 1px solid var(--black-300);
+    border-radius: 12px;
+    width: min(1120px, 100%);
+    max-height: 92vh;
+    overflow-y: auto;
+    padding: 24px 28px;
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.06),
+        0 12px 28px -8px rgba(0, 0, 0, 0.12);
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 8px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid color-mix(in srgb, var(--black-300) 65%, transparent);
+}
+
+.title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--black-800);
+    flex: 1;
+    min-width: 0;
+}
+
+.closeBtn {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--black-300) 35%, var(--white));
+    color: var(--black-600);
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+        background-color 0.15s ease,
+        color 0.15s ease,
+        border-color 0.15s ease;
+}
+.closeBtn:hover {
+    background: color-mix(in srgb, var(--black-600) 12%, var(--white));
+    color: var(--black-800);
+    border-color: var(--black-300);
+}
+
+.sectionTitle {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--black-800);
+    margin: 0 0 12px;
+    padding-left: 10px;
+    border-left: 3px solid var(--primary);
+    line-height: 1.35;
+}
+
+.sectionBlock {
+    margin-top: 18px;
+    padding: 16px 18px 18px;
+    background: color-mix(in srgb, var(--primary) 4%, var(--white));
+    border: 1px solid color-mix(in srgb, var(--primary) 14%, var(--black-300));
+    border-radius: 10px;
+}
+
+.gridTop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 4px;
+}
+
+.gridClient {
+    margin-top: 14px;
+}
+
+@media (max-width: 640px) {
+    .gridTop {
+        grid-template-columns: 1fr;
+    }
+
+    .sectionBlock {
+        padding: 14px;
+    }
+}
+
+.autoNumberHint {
+    padding: 11px 14px;
+    border: 1px solid color-mix(in srgb, var(--primary) 28%, var(--black-300));
+    border-left: 4px solid var(--primary);
+    border-radius: 8px;
+    font-size: 13px;
+    color: var(--black-800);
+    line-height: 1.45;
+    background: color-mix(in srgb, var(--primary) 9%, var(--white));
+}
+
+.orderPickCell {
+    display: flex;
+    align-items: stretch;
+    gap: 4px;
+    width: 100%;
+    min-width: 160px;
+}
+
+.nameWithMeta {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    min-width: 0;
+    width: 100%;
+}
+
+.metaUnderName {
+    font-size: 11px;
+    font-weight: 400;
+    color: #78909c;
+    line-height: 1.3;
+    word-break: break-word;
+}
+
+.colNum { width: 48px; }
+.colKind { width: 140px; }
+.colQty { width: 90px; }
+.colPrice { width: 120px; }
+.colTotal { width: 120px; }
+.colSale { width: 180px; }
+.colDel { width: 56px; }
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--black-600);
+}
+
+.input,
+.select {
+    padding: 9px 12px;
+    border: 1px solid var(--black-300);
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background: var(--white);
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
+}
+.input:focus,
+.select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px var(--primary);
+}
+
+.tableWrap {
+    overflow-x: auto;
+    border: 1px solid color-mix(in srgb, var(--primary) 12%, var(--black-300));
+    border-radius: 8px;
+    background: var(--white);
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+.table th {
+    background: color-mix(in srgb, var(--primary) 10%, var(--white));
+    padding: 10px 8px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--black-800);
+    border-bottom: 2px solid color-mix(in srgb, var(--primary) 22%, var(--black-300));
+}
+.table td {
+    padding: 8px;
+    border-bottom: 1px solid color-mix(in srgb, var(--black-300) 55%, transparent);
+    vertical-align: middle;
+}
+.table tbody tr {
+    transition: background-color 0.12s ease;
+}
+.table tbody tr:hover {
+    background: #f0f7ff;
+}
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+.table input,
+.table select {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.table.tableExcel {
+    border: 1px solid #b0b8c4;
+}
+.table.tableExcel th {
+    background: #e8eef5;
+    border: 1px solid #b0b8c4;
+    padding: 6px 8px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #333;
+}
+.table.tableExcel td {
+    border: 1px solid #d6d9de;
+    padding: 4px 6px;
+    background: #fff;
+    vertical-align: middle;
+    min-height: 40px;
+}
+.table.tableExcel tbody tr:nth-child(even) td {
+    background: #fafbfc;
+}
+.table.tableExcel tbody tr:hover td {
+    background: #eef5fc;
+}
+.table.tableExcel input {
+    border: 1px solid transparent;
+    background: transparent;
+    padding: 4px 6px;
+    border-radius: 0;
+    font-size: 13px;
+    min-height: 32px;
+}
+.table.tableExcel input:focus {
+    background: #fff;
+    border-color: #1976d2;
+    box-shadow: inset 0 0 0 1px #1976d2;
+}
+.table.tableExcel .kindSelect {
+    min-height: 32px;
+    height: 32px;
+    padding: 4px 6px;
+    box-sizing: border-box;
+}
+.table.tableExcel .btnSm {
+    min-height: 28px;
+    padding: 4px 10px;
+    font-size: 12px;
+}
+
+.numCell {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+.numCell input {
+    text-align: right;
+}
+
+.rowActions {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.btnSm {
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--black-300);
+    background: var(--white);
+    color: var(--black-800);
+    cursor: pointer;
+    font-size: 13px;
+    transition:
+        border-color 0.15s ease,
+        color 0.15s ease,
+        background-color 0.15s ease,
+        box-shadow 0.15s ease;
+}
+.btnSm:hover:not(:disabled) {
+    border-color: var(--primary);
+    color: var(--primary);
+    background: color-mix(in srgb, var(--primary) 6%, var(--white));
+}
+.btnSm:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.footerTotals {
+    margin-top: 18px;
+    padding: 16px 18px;
+    background: color-mix(in srgb, var(--primary) 7%, var(--white));
+    border: 1px solid color-mix(in srgb, var(--primary) 18%, var(--black-300));
+    border-radius: 10px;
+    border-top: 3px solid var(--primary);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    font-size: 14px;
+    color: var(--black-800);
+}
+.footerTotals strong {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid var(--black-300);
+}
+
+.actionsSpacer {
+    flex: 1;
+    min-width: 8px;
+}
+
+.statusSelectWrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 4px;
+}
+
+.statusSelectLabel {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--black-700);
+    white-space: nowrap;
+}
+
+.statusSelect {
+    min-width: 168px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid var(--black-300);
+    background: var(--white);
+    color: var(--black-800);
+    font-size: 14px;
+    cursor: pointer;
+}
+.statusSelect:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary) 22%, transparent);
+}
+
+.btnCancel {
+    padding: 9px 20px;
+    border-radius: 8px;
+    border: 1px solid var(--black-300);
+    background: var(--white);
+    color: var(--black-800);
+    cursor: pointer;
+    font-size: 14px;
+    transition:
+        border-color 0.15s ease,
+        background-color 0.15s ease;
+}
+.btnCancel:hover {
+    border-color: var(--black-600);
+    background: color-mix(in srgb, var(--black-300) 28%, var(--white));
+}
+
+.btnSave {
+    padding: 9px 24px;
+    border-radius: 8px;
+    border: none;
+    background: var(--primary);
+    color: var(--white);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition:
+        filter 0.15s ease,
+        box-shadow 0.15s ease;
+}
+.btnSave:hover:not(:disabled) {
+    filter: brightness(1.06);
+    box-shadow: 0 4px 12px color-mix(in srgb, var(--primary) 35%, transparent);
+}
+.btnSave:disabled {
+    background: color-mix(in srgb, var(--primary) 42%, #cbd5e1);
+    cursor: not-allowed;
+    filter: none;
+    box-shadow: none;
+}
+
+.error {
+    color: #b91c1c;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.deleteContractBtn {
+    padding: 9px 16px;
+    background: var(--white);
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition:
+        background-color 0.15s ease,
+        border-color 0.15s ease;
+}
+.deleteContractBtn:hover:not(:disabled) {
+    background: #ffebee;
+    border-color: #e57373;
+}
+.deleteContractBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.deleteConfirmOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 110;
+    border-radius: 12px;
+}
+.deleteConfirmBox {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 24px;
+    width: min(420px, 92%);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+.deleteConfirmTitle {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--black-800);
+}
+.deleteConfirmText {
+    margin: 0 0 14px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--black-600);
+}
+.deleteConfirmInput {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border: 1px solid var(--black-300);
+    border-radius: 8px;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+.deleteConfirmInput:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary) 22%, transparent);
+}
+.deleteConfirmError {
+    color: #c62828;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+.deleteConfirmActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 16px;
+}
+.deleteConfirmCancelBtn {
+    padding: 8px 16px;
+    background: color-mix(in srgb, var(--black-300) 35%, var(--white));
+    border: 1px solid var(--black-300);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.deleteConfirmCancelBtn:hover:not(:disabled) {
+    background: color-mix(in srgb, var(--black-300) 55%, var(--white));
+}
+.deleteConfirmSubmitBtn {
+    padding: 8px 16px;
+    background: #c62828;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+.deleteConfirmSubmitBtn:hover:not(:disabled) {
+    background: #b71c1c;
+}
+.deleteConfirmSubmitBtn:disabled,
+.deleteConfirmCancelBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Печать: DOMда қолади, экрандан ташқари (opacity 0 — баъзи браузерларда босма бўш чиқади) */
+.printOffscreen {
+    position: absolute;
+    left: -12000px;
+    top: 0;
+    width: 210mm;
+    pointer-events: none;
+}
+
+.saleCell {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    min-width: 140px;
+}
+
+.saleDone {
+    font-size: 12px;
+    font-weight: 600;
+    color: #2e7d32;
+}
+
+.saleEmpty {
+    font-size: 12px;
+    color: #90a4ae;
+}
+
+.kindSelect {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid var(--black-300);
+    border-radius: 6px;
+    background: var(--white);
+    font-size: 13px;
+}
+
+.analiticSelect {
+    position: relative;
+    min-width: 160px;
+}
+
+.analiticSelectBtn {
+    width: 100%;
+    text-align: left;
+    padding: 6px 8px;
+    border: 1px solid var(--black-300);
+    border-radius: 6px;
+    background: var(--white);
+    cursor: pointer;
+    font-size: 13px;
+    min-height: 32px;
+}
+
+.analiticDropdown {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 20;
+    background: #fff;
+    border: 1px solid var(--black-300);
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    padding: 8px;
+    min-width: 240px;
+}
+
+.analiticList {
+    max-height: 220px;
+    overflow: auto;
+    margin-top: 6px;
+}
+
+.analiticOption {
+    display: block;
+    width: 100%;
+    text-align: left;
+    border: none;
+    background: transparent;
+    padding: 7px 8px;
+    cursor: pointer;
+    font-size: 13px;
+    border-radius: 4px;
+}
+
+.analiticOption:hover {
+    background: #f0f7ff;
+}
+
+.analiticEmpty {
+    padding: 10px;
+    color: #888;
+    font-size: 13px;
+    text-align: center;
+}

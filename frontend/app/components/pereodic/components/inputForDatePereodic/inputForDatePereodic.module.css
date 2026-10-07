@@ -1,0 +1,26 @@
+.input {
+    display: block;
+    padding: 10px 12px;
+    font-size: 14px;
+    line-height: 18px;
+    width: 100%;
+    border: 1px solid var(--black-300);
+    border-radius: 8px;
+    background: var(--white);
+}
+
+.input::placeholder {
+   font-weight: 300; 
+}
+
+.label {
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    /* text-decoration: underline; */
+}
+
+.box{
+    margin: 5px 0px;
+}

@@ -1,0 +1,1056 @@
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+  }
+  
+  .modal {
+    background: white;
+    border-radius: 8px;
+    width: 85vw;
+    max-width: 85vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    border-bottom: 1px solid #e5e7eb;
+    background-color: #f9fafb;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .headerLeft {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+  }
+  
+  .connectionStatus {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  .statusDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+  
+  .statusDot.connected {
+    background-color: #10b981;
+  }
+  
+  .statusDot.disconnected {
+    background-color: #ef4444;
+  }
+  
+  .headerRight {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .viewModeToggle {
+    display: flex;
+    border: var(--border-width) solid var(--border-color-light);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  
+  .viewModeButton {
+    padding: 8px 16px;
+    background: white;
+    border: none;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+  }
+  
+  .viewModeButton:hover {
+    background-color: #f3f4f6;
+  }
+  
+  .viewModeButton.active {
+    background-color: #3b82f6;
+    color: white;
+  }
+
+  .addButton {
+    padding: 8px 16px;
+    border: 1px solid #3b82f6;
+    border-radius: 6px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+
+  .addButton:hover {
+    background-color: #dbeafe;
+  }
+
+  .closeButton {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: #f3f4f6;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.125rem;
+    transition: background-color 0.2s;
+  }
+  
+  .closeButton:hover {
+    background-color: #e5e7eb;
+  }
+  
+  .searchContainer {
+    padding: 16px 24px;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.searchInputRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.dictionaryFilterRow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(180px, 1fr));
+  gap: 10px 12px;
+}
+
+.dictionaryFilterItem {
+  min-width: 0;
+}
+
+.dictionaryFilterItem > div {
+  margin-bottom: 0;
+}
+
+.dictionaryFilterItem :global(.customSelect) {
+  min-height: 36px;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.dictionaryFilterItem :global(.searchInput) {
+  font-size: 0.875rem;
+  line-height: 1.2;
+}
+
+.dictionaryFilterItem :global(.arrow) {
+  margin-left: 8px;
+  font-size: 10px;
+}
+
+.dictionaryFilterItem :global(.option),
+.dictionaryFilterItem :global(.noResults) {
+  font-size: 0.875rem;
+  padding: 8px 10px;
+}
+
+.dictionaryFilterItem :global(.dropdown) {
+  margin-top: 2px;
+}
+
+.dictionaryFilterItem :global(.defaultSelected) {
+  color: #6b7280;
+  font-style: normal;
+}
+
+@media (max-width: 1280px) {
+  .dictionaryFilterRow {
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .dictionaryFilterRow {
+    grid-template-columns: 1fr;
+  }
+  }
+  
+  .searchInput {
+    padding: 12px 16px;
+    border: var(--border-width) solid var(--border-color-light);
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+  }
+
+  .searchInputName {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .searchInputArticle {
+    flex: 0 0 auto;
+    width: 11ch;
+    min-width: 11ch;
+    max-width: 11ch;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .searchInput:focus {
+    border-color: var(--border-color-focus);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+  
+  .itemsPerPageSelector {
+    padding: 12px 20px;
+    margin: 0 16px 8px;
+    border: 1px solid #93c5fd;
+    border-left: 3px solid #3b82f6;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f9fafb;
+  }
+  
+  .itemsPerPageSelector label {
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+  }
+  
+  .itemsPerPageSelect {
+    padding: 6px 12px;
+    border: var(--border-width) solid var(--border-color-light);
+    border-radius: 4px;
+    background: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+  }
+  
+  .itemsPerPageSelect:hover {
+    border-color: #9ca3af;
+  }
+  
+  .itemsPerPageSelect:focus {
+    outline: none;
+    border-color: var(--border-color-focus);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
+  }
+  
+  .content {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .paginationFooter {
+    flex-shrink: 0;
+    padding: 12px 16px 16px;
+    background: #fff;
+    border-top: 1px solid #e5e7eb;
+  }
+  
+  .loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 16px;
+    color: #6b7280;
+  }
+  
+  .loadingIco {
+    width: 32px;
+    height: 32px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  .productList {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+  }
+  
+  .productList.gridView {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  
+  .productList.listView {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .emptyState {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #6b7280;
+    font-size: 1.125rem;
+  }
+  
+  /* Grid Item Styles */
+  .gridView .gridItem {
+    border: var(--border-width) solid var(--border-color-light);
+    border-radius: 12px;
+    padding: 0;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    height: 395px;
+    min-height: 395px;
+  }
+  
+  .gridView .gridItem:hover {
+    border-color: var(--border-color-focus);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+
+  .gridView .gridItem.focusedItem {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.28);
+  }
+  
+  /* Папки теперь выглядят как товары, но с индикатором папки */
+  .gridView .gridItem.folderItem {
+    background: white;
+    border: 2px solid #f59e0b;
+    position: relative;
+  }
+  
+  .gridView .gridItem.folderItem:hover {
+    border-color: #d97706;
+    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.25);
+    transform: translateY(-2px);
+  }
+  
+  .gridView .gridItem.folderItem::before {
+    content: "📁";
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 1.2rem;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 4px;
+    padding: 2px 4px;
+  }
+  
+  /* Желтый фон для нижней 40% области папок */
+  .gridView .gridItem.folderItem .itemContent {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-radius: 0 0 12px 12px;
+  }
+  
+  .itemIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: #f3f4f6;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .folderOpenIcon,
+  .folderPlusIcon,
+  .folderIcon {
+    width: 24px;
+    height: 24px;
+    color: #f59e0b;
+  }
+  
+  .folderIcon.noChildren {
+    color: #a3a3a3;
+  }
+  
+  .itemIcon {
+    width: 24px;
+    height: 24px;
+    color: #6b7280;
+  }
+  
+  .itemContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 12px;
+  }
+  
+  /* Специальные стили для grid view */
+  .gridView .itemContent {
+    flex: 1 !important;
+    padding: 12px !important;
+    padding-bottom: 0 !important; /* Убираем padding-bottom, так как кнопка теперь в отдельном блоке */
+    gap: 6px !important;
+    justify-content: flex-start !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden; /* Скрываем переполнение */
+  }
+  
+  /* Стили для изображения товара в grid режиме */
+  .gridView .productImageContainer {
+    position: relative;
+    width: 100% !important;
+    height: 170px !important; /* Уменьшено на 10px, чтобы кнопка была видна полностью */
+    max-height: 170px !important; /* Максимальная высота */
+    min-height: 170px !important; /* Минимальная высота */
+    overflow: hidden;
+    background: #f8f9fa;
+    display: block !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    min-width: 180px !important; /* Минимальная ширина карточки */
+    flex-shrink: 0 !important;
+    flex-grow: 0 !important; /* Не растягиваться */
+  }
+  
+  .productImage {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  
+  /* Принудительное растягивание для grid view */
+  .gridView .productImageContainer .productImage {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    min-height: 220px !important; /* Обновленная минимальная высота */
+    min-width: 220px !important; /* Минимальная ширина карточки */
+    max-height: none !important;
+    max-width: none !important;
+    flex-shrink: 0 !important;
+    flex-grow: 1 !important;
+    display: block !important;
+  }
+  
+  .gridView .gridItem:hover .productImage {
+    transform: scale(1.05);
+  }
+  
+  .imagePlaceholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: #f3f4f6;
+    color: #9ca3af;
+    font-size: 3rem;
+  }
+  
+  /* Растягивание placeholder в grid view */
+  .gridView .imagePlaceholder {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 220px !important; /* Обновленная минимальная высота */
+    min-width: 220px !important;
+  }
+  
+  .itemName {
+    font-weight: 400;
+    color: #111827;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-align: left;
+    min-height: 35px;
+    /* overflow: hidden; */
+  }
+  
+  .itemMeta {
+    font-size: 0.8125rem;
+    color: #6b7280;
+    line-height: 1.35;
+    margin-bottom: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .itemMetaSep {
+    color: #9ca3af;
+    user-select: none;
+  }
+
+  .gridView .gridItem .itemMeta {
+    font-size: 0.75rem;
+    margin-bottom: 4px;
+  }
+
+  .listItem .itemMeta {
+    font-size: 0.72rem;
+    margin-top: 4px;
+    width: 100%;
+  }
+
+  .itemComment {
+    color: #6b7280;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    margin-bottom: auto;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .price {
+    font-weight: 700;
+    color: #dc2626;
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  
+  /* Специальные стили для grid view - компактные */
+  .gridView .gridItem .itemName {
+    font-size: 16px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 4px !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3 !important;
+    line-clamp: 3 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    word-break: break-word !important;
+    min-height: 63px !important;
+    color: #111827 !important;
+  }
+  
+  .gridView .gridItem .itemComment {
+    font-size: 0.8rem !important;
+    line-height: 1.3 !important;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    display: block !important;
+    color: #6b7280 !important;
+  }
+  
+  .gridView .gridItem .price {
+    font-size: 1rem !important;
+    margin-bottom: 6px !important;
+    display: block !important;
+    color: black !important;
+  }
+  
+  .stockInfo {
+    /* display: flex;
+    flex-direction: column;
+    gap: 4px; */
+    /* font-size: 0.875rem; */
+    /* padding: 8px 0px; */
+    /* background: #f8f9fa; */
+    /* border-radius: 6px; */
+    margin-bottom: 5px;
+    text-align: left;
+  
+  }
+  
+  .availableQuantity {
+    /* color: #059669; */
+    font-weight: 400;
+    font-size: 15px;
+  }
+
+  .availableQuantity span {
+    font-weight: 600;
+  }
+  
+  .reservedQuantity {
+    color: #d97706;
+    font-weight: 500;
+  }
+  
+  .loadingStock {
+    color: #6b7280;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .loadingDot {
+    animation: pulse 1.5s ease-in-out infinite;
+    color: #3b82f6;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.3;
+    }
+  }
+  
+  .addToCart {
+    display: flex;
+    gap: 8px;
+    margin-top: auto;
+    width: 100%;
+  }
+  
+  /* Компактные стили для grid view */
+  .gridView .gridItem .stockInfo {
+    /* gap: 2px; */
+    font-size: 0.75rem;
+    /* padding: 4px 0px; */
+    /* border-radius: 4px; */
+    /* margin-bottom: 6px; */
+  }
+  
+  .gridView .gridItem .loadingStock {
+    font-size: 0.7rem;
+    gap: 4px;
+  }
+  
+  .gridView .gridItem .addToCart {
+    gap: 6px !important;
+    margin-top: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 12px !important;
+    padding-top: 0 !important;
+  }
+  
+  .quantityInput {
+    width: 70px;
+    padding: 8px 12px;
+    border: var(--border-width) solid var(--border-color-light);
+    border-radius: 6px;
+    font-size: 0.875rem;
+    text-align: center;
+    transition: border-color 0.2s;
+  }
+  
+  .quantityInput:focus {
+    outline: none;
+    border-color: var(--border-color-focus);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+  
+  .addButton {
+    flex: 1;
+    padding: 10px 16px;
+    background: #059669;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Компактные стили для grid view */
+  .gridView .gridItem .quantityInput {
+    width: 50px;
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+  }
+  
+  .gridView .gridItem .quantityInput:focus {
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+  }
+  
+  .gridView .gridItem .addButton {
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    letter-spacing: 0.3px;
+  }
+  
+  .addButton:hover:not(:disabled) {
+    background: #047857;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+  }
+  
+  .addButton:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  /* List Item Styles */
+  .listItem {
+    display: grid;
+    grid-template-columns: 60px 2fr 1fr 1fr 1fr 150px;
+    gap: 12px;
+    align-items: center;
+    padding: 8px 12px;
+    border: var(--border-width) solid var(--border-color-light);
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s;
+    min-height: 60px;
+    max-height: 96px;
+  }
+  
+  .listItem:hover {
+    border-color: var(--border-color-focus);
+    background-color: #f8fafc;
+  }
+
+  .listItem.focusedItem {
+    border-color: #2563eb;
+    background-color: #eff6ff;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+  }
+  
+  /* Yellow folder colors for list view - Minimal gradient */
+  .listItem.folderItem {
+    background: linear-gradient(90deg, #fefce8 0%, #fef3c7 100%);
+    border-left: 4px solid #f59e0b;
+    font-weight: 600;
+  }
+  
+  .listItem.folderItem:hover {
+    background: linear-gradient(90deg, #fef3c7 0%, #fde68a 100%);
+    border-color: #d97706;
+  }
+  
+  /* Nested items styling for tree view */
+  .listItem.nestedItem {
+    background-color: #f9fafb;
+    border-left: 4px solid #9ca3af;
+  }
+  
+  /* Стили для изображения в списке */
+  .listItem .productImageContainer {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .listItem .productImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .listItem .imagePlaceholder {
+    font-size: 1.5rem;
+    color: #9ca3af;
+  }
+  
+  .listItem .itemIcon {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    flex-shrink: 0;
+  }
+  
+  .listItem .folderOpenIcon,
+  .listItem .folderPlusIcon,
+  .listItem .folderIcon {
+    width: 16px;
+    height: 16px;
+    color: #f59e0b;
+  }
+  
+  .listItem .itemName {
+    font-weight: 500;
+    font-size: 0.95rem;
+    line-height: 1.3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .listItem .itemComment {
+    color: #6b7280;
+    font-size: 0.875rem;
+  }
+  
+  .listItem .price {
+    font-weight: 600;
+    color: #059669;
+  }
+  
+  .listItem .stockInfo {
+    font-size: 0.875rem;
+    min-height: 20px;
+    /* max-height: 40px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    word-wrap: break-word;
+  }
+  
+  .listItem .addToCart {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+    max-width: 140px;
+  }
+  
+  .listItem .quantityInput {
+    width: 50px;
+    padding: 4px 6px;
+    font-size: 0.8rem;
+  }
+  
+  .listItem .addButton {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+  
+  /* Кнопка "Буюртмага кушиш" */
+  .addToOrderButton {
+    background: #16A34A;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(22, 163, 74, 0.3);
+  }
+  
+  .addToOrderButton:hover {
+    background: #15803d;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.4);
+  }
+  
+  /* Стили для grid view */
+  .gridView .addToOrderButton {
+    font-size: 0.85rem;
+    padding: 10px 12px;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+  }
+  
+  /* Стили для list view */
+  .listItem .addToOrderButton {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  /* Кнопка "Калькуляции" */
+  .calculationsButton {
+    background: #3B82F6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 100%;
+    box-shadow: 0 2px 6px rgba(59, 130, 246, 0.3);
+  }
+
+  .calculationsButton:hover {
+    background: #2563EB;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.4);
+  }
+
+  /* Стили для grid view */
+  .gridView .calculationsButton {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+  }
+
+  /* Стили для list view */
+  .listItem .calculationsButton {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+    width: 100%;
+    flex-shrink: 0;
+  }
+  
+  /* Error State Styles */
+  .errorState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: #d32f2f;
+    font-size: 0.9rem;
+    gap: 1rem;
+  }
+  
+  .retryButton {
+    background: #1976d2;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.2s;
+  }
+  
+  .retryButton:hover {
+    background: #1565c0;
+  }
+  
+  /* Стили для изображений товаров */
+  .imageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    min-height: 60px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #f9fafb;
+  }
+  
+  .productImage {
+    width: 100%;
+    max-width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .imagePlaceholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: #e5e7eb;
+    border-radius: 4px;
+    font-size: 24px;
+    color: #9ca3af;
+  }
+  
+  /* Адаптация для list режима */
+  .listItem .imageContainer {
+    min-height: 40px;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
+  
+  .listItem .productImage {
+    max-width: 40px;
+    height: 40px;
+  }
+  
+  .listItem .imagePlaceholder {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  
+  /* Обновляем itemContent для работы с изображениями */
+  .listItem .itemContent {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .gridItem .itemContent {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .stockValue{
+    display: flex;
+  }

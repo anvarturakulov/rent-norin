@@ -1,0 +1,55 @@
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.docContainer {
+    margin-bottom: 20px;
+}
+
+.reportBodyHidden {
+    display: none;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid var(--border-color-light);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.table td,
+.table th {
+    border: 1px solid var(--border-color-light);
+    text-align: left;
+    padding: 10px 8px;
+    font-size: 13px;
+}
+
+.table th {
+    text-align: center;
+    background-color: #f0f4f8;
+    color: #334155;
+    font-weight: 600;
+}
+
+.table tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+.table thead,
+.table tbody tr {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.table tbody {
+    display: block;
+}

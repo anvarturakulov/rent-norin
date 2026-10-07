@@ -1,0 +1,164 @@
+.title{
+  margin: 20px 0px;
+  font-weight: 600;
+  background: #2563EB;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 16px;
+  box-shadow: 8px 8px 8px 0px rgba(34, 60, 80, 0.13);
+}
+
+.tableContainer {
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 80vh;
+  margin: 20px 0;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.13);
+  border-radius: 5px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  min-width: 600px;
+}
+
+.table thead {
+  background: #2563EB;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.table th {
+  padding: 12px 8px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  vertical-align: top;
+}
+
+.productColumn {
+  min-width: 200px;
+  text-align: left !important;
+  position: sticky;
+  left: 0;
+  background: #2563EB;
+  z-index: 25;
+}
+
+.materialColumn {
+  min-width: 120px;
+  max-width: 150px;
+}
+
+.materialHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.materialUnit {
+  font-size: 11px;
+  opacity: 0.9;
+  font-weight: normal;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid var(--border-color-light);
+}
+
+.table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.table td {
+  padding: 10px 8px;
+  text-align: center;
+  border: 1px solid var(--border-color-light);
+  font-size: 14px;
+}
+
+.productCell {
+  position: sticky;
+  left: 0;
+  background: #fff;
+  z-index: 15;
+  text-align: left !important;
+  font-weight: 500;
+}
+
+.table tbody tr:hover .productCell {
+  background: #f5f5f5;
+}
+
+.table thead tr:hover .productColumn {
+  background: #2563EB;
+}
+
+.productName {
+  font-weight: 500;
+}
+
+.productUnit {
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.productPrice {
+  font-size: 13px;
+  color: #059669;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.normCell {
+  text-align: center;
+}
+
+.normValue {
+  color: #059669;
+  font-weight: 500;
+}
+
+.emptyCell {
+  color: #999;
+  font-style: italic;
+}
+
+.emptyMessage {
+  padding: 40px 20px;
+  text-align: center;
+  color: #999;
+  font-size: 16px;
+  font-style: italic;
+  background: #f9f9f9;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .table {
+    font-size: 12px;
+  }
+  
+  .table th,
+  .table td {
+    padding: 8px 4px;
+  }
+  
+  .productColumn {
+    min-width: 150px;
+  }
+  
+  .materialColumn {
+    min-width: 100px;
+  }
+}
+

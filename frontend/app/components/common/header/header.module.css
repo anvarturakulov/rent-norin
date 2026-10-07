@@ -1,0 +1,356 @@
+.title{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #64748b;
+}
+
+.newWindow{
+    background-color: #eff5e3;
+    padding:10px;
+}
+
+.ico{
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
+}
+
+.ico:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.box{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+    border-bottom: 1px dotted #000;
+    border-top: 1px dotted #000;
+    padding: 10px 0px;
+    user-select: none;
+}
+
+.menu {
+    position: fixed;
+    width: 50px;
+    height: 40px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 100;
+    padding: 5px;
+}
+
+.menu:hover{
+    padding: 20px 10px;
+    background: #F5F5F5;
+    width: 15%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.icoHome{
+    width: 30px;
+    height: 30px;
+    /* background: #000; */
+}
+
+.headerBox{
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.headerTitleRow{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.headerTitle{
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.docTypeBadge{
+    display: inline-flex;
+    align-items: center;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 4px 12px;
+    border-radius: 6px;
+    color: #fff;
+}
+
+.docTypeBadgeGreen{
+    background-color: #16a34a;
+}
+
+.docTypeBadgeRed{
+    background-color: #dc2626;
+}
+
+.docTypeBadgeBlue{
+    background-color: #2563eb;
+}
+
+.readyOrdersHint{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    padding: 6px 10px 6px 6px;
+    border: 1px solid #bfdbfe;
+    border-radius: 999px;
+    background: #eff6ff;
+    color: #1e3a8a;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.2;
+    cursor: pointer;
+}
+
+.readyOrdersHint:hover{
+    background: #dbeafe;
+}
+
+.readyOrdersCount{
+    min-width: 22px;
+    height: 22px;
+    padding: 0 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: #2563eb;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.addButton{
+    background-color: #0F172A;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.addButton span{
+    font-size: 24px;
+    margin-right: 10px;
+    color: #e4e2e2;
+}
+
+.addButton:hover{
+    background-color: #1E293B;
+}
+
+.headerTitleText{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.rightActions{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.printBtn{
+    padding: 4px 12px;
+    background-color: #f0f0f0;
+    border: 1px solid var(--border-color-light);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #333;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.printBtn:hover{
+    background-color: #e0e0e0;
+    border-color: var(--border-color-light);
+}
+
+.printBtn:disabled{
+    cursor: wait;
+    opacity: 0.6;
+}
+
+.printBtn:disabled:hover{
+    background-color: #f0f0f0;
+    border-color: var(--border-color-light);
+}
+
+.filterBtnActive{
+    background-color: #fff3cd;
+    border-color: #d32f2f;
+    color: #d32f2f;
+    font-weight: 600;
+}
+
+.filterBtnActive:hover{
+    background-color: #ffe8a3;
+    border-color: #c62828;
+}
+
+.scrollSentinel {
+    height: 1px;
+    width: 100%;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.floatingPanel {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    width: 280px;
+    max-width: calc(100vw - 20px);
+    padding: 12px 14px;
+    background: #fff;
+    border-top: 1px solid var(--border-color-light);
+    border-right: 1px solid var(--border-color-light);
+    box-shadow: 0 -4px 12px rgba(34, 60, 80, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.floatingInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.floatingTitle {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0F172A;
+    line-height: 1.3;
+}
+
+.floatingSubtitle {
+    font-size: 12px;
+    line-height: 1.35;
+    color: #374151;
+    word-break: break-word;
+}
+
+.floatingInterval {
+    margin-top: 4px;
+    padding: 0;
+    border: none;
+    background: none;
+    font-size: 11px;
+    line-height: 1.35;
+    color: #2563EB;
+    text-align: left;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.floatingInterval:hover {
+    color: #1D4ED8;
+}
+
+.floatingPanel .addButton {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px 12px;
+}
+
+.floatingPanel .addButton span {
+    font-size: 20px;
+}
+
+.journalMetaLine {
+    font-size: 14px;
+    line-height: 1.45;
+    color: #475569;
+}
+
+.journalMetaButton {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    color: #2563EB;
+}
+
+.journalMetaButton:hover:not(:disabled) {
+    color: #1D4ED8;
+}
+
+.journalMetaButton:disabled {
+    cursor: wait;
+    opacity: 0.7;
+}
+
+.journalMetaButtonLoading {
+    cursor: wait;
+}
+
+.floatingJournalMeta {
+    font-size: 12px;
+    color: #64748b;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 50vw;
+}
+
+.reportMetaBox,
+.journalMetaBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 16px;
+    padding: 14px 16px;
+    background: #fafbfc;
+    border: 1px solid var(--border-color-light);
+    border-radius: 10px;
+}
+
+.reportMetaDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+    flex: 1;
+}
+
+.reportMetaLine {
+    font-size: 14px;
+    line-height: 1.45;
+    color: #475569;
+}
+
+.reportMetaLine:first-child {
+    font-weight: 500;
+    color: #334155;
+}
+

@@ -1,0 +1,145 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 900px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color-light, #e2e8f0);
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.closeButton:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.content {
+  flex: 1;
+  padding: 16px 20px 20px;
+  overflow-y: auto;
+}
+
+.summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #475569;
+}
+
+.summary strong {
+  color: #0f172a;
+}
+
+.loading,
+.error,
+.empty {
+  text-align: center;
+  padding: 32px 16px;
+  color: #666;
+}
+
+.error {
+  color: #dc3545;
+}
+
+.error button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  border: 1px solid #000;
+}
+
+.table th,
+.table td {
+  border: 1px solid #000;
+  padding: 7px 8px;
+}
+
+.table thead th {
+  background: #f8fafc;
+  font-weight: 600;
+  text-align: center;
+}
+
+.numeric {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.center {
+  text-align: center;
+}
+
+.docLink {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: #1565c0;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.docLink:hover {
+  color: #0d47a1;
+}
+
+.muted {
+  color: #94a3b8;
+}

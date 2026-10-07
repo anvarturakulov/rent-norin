@@ -1,0 +1,50 @@
+{
+  "name": "kord-mebers-f",
+  "version": "0.0.1",
+  "description": "Frontend for KORD ERP - Mebers",
+  "author": "Anvar Turakulov",
+  "private": true,
+  "license": "Proprietary",
+  "scripts": {
+    "dev": "next dev -p 3009 --webpack",
+    "build:lint": "next build --no-lint",
+    "build:no-eslint": "ESLINT_NO_DEV_ERRORS=true next build",
+    "build": "next build --webpack",
+    "start": "next start -p 3009",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.2.0",
+    "@mantine/notifications": "^7.3.2",
+    "@svgr/webpack": "^8.1.0",
+    "axios": "^1.6.2",
+    "chart.js": "^4.5.0",
+    "chartjs-plugin-datalabels": "^2.2.0",
+    "classnames": "^2.3.2",
+    "gsap": "^3.13.0",
+    "har-validator": "^5.1.5",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^3.0.1",
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
+    "next": "^16.1.1",
+    "node-thermal-printer": "^4.5.0",
+    "react": "^18",
+    "react-chartjs-2": "^5.3.0",
+    "react-dom": "^18",
+    "react-number-format": "^5.4.4",
+    "react-to-print": "^3.1.1",
+    "socket.io-client": "^4.8.1",
+    "swr": "^2.2.4",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.12",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^9",
+    "eslint-config-next": "^16.1.1",
+    "typescript": "^5"
+  }
+}

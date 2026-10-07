@@ -1,0 +1,138 @@
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 24px 32px;
+}
+
+.titleBox > div {
+    text-align: center;
+    margin-bottom: 6px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #64748b;
+}
+
+.titleBox {
+    position: relative;
+    margin-bottom: 24px;
+    padding: 20px 48px 20px 24px;
+    background: #fafbfc;
+    border: 1px solid var(--border-color-light);
+    border-radius: 10px;
+}
+
+.matOborotReportScroll {
+    --report-title-offset: 0px;
+    --section-title-offset: 50px;
+    max-height: calc(100vh - 200px);
+    overflow: auto;
+    position: relative;
+}
+
+.titleBoxPrintOnly {
+    display: none;
+    margin-bottom: 0;
+}
+
+.titleBox span {
+    font-weight: 500;
+    color: #475569;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 4px !important;
+}
+
+.titleBox .organization {
+    font-size: 15px;
+    text-align: center;
+    font-weight: 500;
+    color: #334155;
+}
+
+.metaLine {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.button {
+    padding: 5px 20px;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid var(--border-color-light);
+}
+
+.ico {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 4px;
+    cursor: pointer;
+    fill: var(--primary);
+    border-radius: 6px;
+    transition: fill 0.2s ease, background-color 0.2s ease;
+}
+
+.ico:hover {
+    fill: #1d4ed8;
+    background-color: #eff6ff;
+}
+
+/* Стили для печати */
+@media print {
+    .titleBoxPrintOnly {
+        display: block;
+        margin-bottom: 16px;
+    }
+
+    .matOborotReportScroll {
+        max-height: none;
+        overflow: visible;
+    }
+
+    .container {
+        padding: 10px;
+        font-size: 12px;
+        line-height: 1.2;
+    }
+    
+    .titleBox {
+        margin-bottom: 10px;
+        padding: 10px;
+        background: #fff;
+        border: none;
+        border-bottom: 1px solid var(--border-color-light);
+    }
+    
+    .titleBox > div {
+        margin-bottom: 5px;
+        font-size: 12px;
+        color: #000;
+    }
+    
+    .title {
+        font-size: 14px;
+        font-weight: 600;
+        color: #000;
+    }
+    
+    .titleBox .organization {
+        font-size: 18px;
+        font-weight: 500;
+        color: #000;
+    }
+    
+    .ico {
+        display: none;
+    }
+}

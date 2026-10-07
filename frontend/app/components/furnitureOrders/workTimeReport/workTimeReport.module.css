@@ -1,0 +1,158 @@
+.container {
+    padding: 16px 20px 24px;
+    max-width: 1200px;
+}
+
+.header {
+    margin-bottom: 16px;
+}
+
+.header h2 {
+    margin: 0 0 6px;
+    font-size: 22px;
+}
+
+.header p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.filterRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: flex-end;
+    margin-bottom: 16px;
+}
+
+.filterField {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 13px;
+}
+
+.filterField input {
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    min-width: 160px;
+}
+
+.btnLoad {
+    padding: 9px 16px;
+    border: none;
+    border-radius: 8px;
+    background: var(--brand);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btnLoad:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.summary {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.summaryCard {
+    background: var(--surface-elevated, #f8fafc);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    min-width: 180px;
+}
+
+.summaryLabel {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.summaryValue {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--brand);
+}
+
+.empty,
+.error,
+.loading {
+    padding: 24px;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.error {
+    color: #b91c1c;
+}
+
+.tableWrap {
+    overflow: auto;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.table th,
+.table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    vertical-align: top;
+}
+
+.table th {
+    background: var(--surface-elevated, #f8fafc);
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+}
+
+.orderRow {
+    background: #f0f9ff;
+    cursor: pointer;
+}
+
+.orderRow:hover {
+    background: #e0f2fe;
+}
+
+.workRow td:first-child {
+    padding-left: 28px;
+}
+
+.workerRow td:first-child {
+    padding-left: 44px;
+    color: var(--text-secondary);
+}
+
+.hoursCell {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.toggle {
+    display: inline-block;
+    width: 18px;
+    margin-right: 6px;
+    color: var(--text-muted);
+}
+
+.orderMeta {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 2px;
+}

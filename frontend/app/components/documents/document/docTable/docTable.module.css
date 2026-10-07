@@ -1,0 +1,92 @@
+
+.box {
+    display: grid;
+    grid-template-columns: 2.5fr 0.8fr 0.5fr 0.5fr 1fr 1fr 1fr auto;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.boxWithBalance {
+    display: grid;
+    grid-template-columns: 2.5fr 0.8fr 0.5fr 1fr 1fr 1fr 0.5fr;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.boxWithWorkers {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 3fr 0.8fr 1.5fr 2fr auto;
+}
+
+.boxWithReciever{
+    grid-template-columns: 2.5fr 0.5fr 1fr 1fr 1fr 1fr 1fr auto;
+}
+
+.titleBox{
+    border-bottom: var(--border-width-divider) solid var(--border-color-table);
+    padding-bottom: 10px;
+}
+
+/* Строка листового материала: лёгкая подсветка фона + акцентная полоса слева */
+.sheetMaterialRow {
+    background-color: color-mix(in srgb, var(--primary, #2563EB) 8%, transparent);
+    box-shadow: inset 3px 0 0 0 var(--primary, #2563EB);
+    border-radius: 4px;
+    padding-left: 6px;
+}
+
+.notColor {
+    color: transparent;
+}
+
+.ico {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    color: blue;
+    fill: red;
+}
+
+.checkbox {
+    border: var(--border-width) solid var(--border-color-light);
+    padding: 10px;
+    cursor: pointer;
+}
+
+.btnBalance{
+    height: 40px;
+    border: var(--border-width) solid var(--border-color);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Колдик (остаток) в таблице материалов: фиксированная ширина, 3 знака после запятой */
+.balanceCell {
+    width: 90px;
+    min-width: 90px;
+    max-width: 90px;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+.nameCellWithCatalog {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+.nameCellWithCatalog > :last-child {
+    flex: 1;
+    min-width: 0;
+}
+
+.articleCell {
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

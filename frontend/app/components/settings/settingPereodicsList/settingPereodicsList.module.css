@@ -1,0 +1,118 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+.loadingBox {
+    padding: 28px 16px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--black-600);
+    background: #f9fafb;
+    border-radius: 10px;
+    border: 1px dashed var(--black-300);
+}
+
+.table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid var(--black-300);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--white);
+}
+
+.table td,
+.table th {
+    border-bottom: 1px solid var(--black-300);
+    border-right: 1px solid var(--black-300);
+    text-align: left;
+    padding: 10px 12px;
+    font-size: 14px;
+}
+
+.table th:last-child,
+.table td:last-child {
+    border-right: none;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.table tr {
+    transition: background-color 0.12s ease;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(37, 99, 235, 0.06);
+}
+
+.table th {
+    font-weight: 600;
+    color: var(--black-800);
+    background: #f4f4f5;
+}
+
+.table thead {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.table tbody tr {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.table tbody {
+    display: block;
+    max-height: min(52vh, 400px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.rowId {
+    width: 52px;
+    text-align: center;
+}
+
+.date {
+    width: 38%;
+}
+
+.value {
+    width: auto;
+}
+
+.rowAction {
+    width: 56px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.trRow {
+    cursor: pointer;
+}
+
+.icoTrash {
+    width: 20px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.icoTrash:hover {
+    fill: red;
+}

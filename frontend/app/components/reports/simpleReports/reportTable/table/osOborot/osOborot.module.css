@@ -1,0 +1,169 @@
+.sectionContainer {
+  margin-bottom: 24px;
+  border: 1px solid var(--border-color-light);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.sectionTitle {
+  color: #1e293b;
+  margin: 0;
+  padding: 14px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color-light);
+  background: #fafbfc;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 960px;
+}
+
+.table td,
+.table th {
+  border: 0.5px solid var(--border-color-light);
+  padding: 8px 10px;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.groupHead {
+  text-align: center;
+  font-weight: 600;
+  font-size: 13px;
+  background: #f0f4f8;
+  color: #334155;
+}
+
+.subHead {
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+  background: #f8fafc;
+  color: #475569;
+}
+
+.stickyCol {
+  text-align: center;
+  font-weight: 600;
+  background: #f8fafc;
+  vertical-align: middle;
+}
+
+.number {
+  width: 44px;
+  min-width: 44px;
+  text-align: center !important;
+}
+
+.title {
+  text-align: left !important;
+  min-width: 260px;
+  max-width: 360px;
+  padding-left: 10px !important;
+}
+
+.articleCol {
+  min-width: 100px;
+  max-width: 140px;
+  text-align: left;
+}
+
+.amountCol {
+  text-align: right !important;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  min-width: 72px;
+}
+
+.tbody tr.leafRow:nth-child(even) {
+  background: #fafafa;
+}
+
+.tbody tr.leafRow:hover {
+  background: #f1f5f9;
+}
+
+.groupRow {
+  background-color: #f0f4f8;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.groupRow:hover {
+  background-color: #e2eaf2;
+}
+
+.groupTitle {
+  max-width: none !important;
+  vertical-align: middle;
+  font-weight: 600;
+}
+
+.groupIdPrefix {
+  color: #475569;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  user-select: all;
+}
+
+.groupFolderName {
+  font-weight: 600;
+}
+
+.expandGlyph {
+  display: inline-block;
+  min-width: 1.1em;
+  font-weight: 700;
+  user-select: none;
+}
+
+.collapsedHidden {
+  display: none;
+}
+
+.footerRow {
+  background-color: #e8f4f8;
+  font-weight: 600;
+}
+
+.footerLabel {
+  text-align: left !important;
+  font-weight: 600;
+}
+
+.footerAmount {
+  text-align: right !important;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.emptyState {
+  padding: 24px 20px;
+  text-align: center;
+  color: #64748b;
+  font-size: 14px;
+}
+
+@media print {
+  .tbody .collapsedHidden {
+    display: table-row !important;
+  }
+
+  .groupRow {
+    cursor: default;
+  }
+
+  .sectionContainer {
+    break-inside: avoid;
+  }
+}

@@ -1,0 +1,59 @@
+.printContainer {
+    display: none;
+}
+
+@media print {
+    .printContainer {
+        display: block;
+        font-family: Arial, sans-serif;
+        font-size: 10pt;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    .title {
+        font-size: 12pt;
+        font-weight: 700;
+    }
+
+    .dateRange {
+        font-size: 10pt;
+    }
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        page-break-inside: auto;
+    }
+
+    .table th,
+    .table td {
+        border: 1px solid #000;
+        padding: 4px 6px;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    .table thead th {
+        background-color: #f0f0f0;
+        font-weight: 600;
+    }
+
+    .sumCell {
+        text-align: right !important;
+        white-space: nowrap;
+    }
+
+    .stageCell {
+        font-weight: 600;
+    }
+
+    .footerRow td {
+        font-weight: 700;
+    }
+}

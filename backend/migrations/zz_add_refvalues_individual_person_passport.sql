@@ -1,0 +1,5 @@
+ALTER TABLE refvalues ADD COLUMN IF NOT EXISTS "isIndividualPerson" BOOLEAN DEFAULT false;
+ALTER TABLE refvalues ADD COLUMN IF NOT EXISTS "passportSeries" VARCHAR(2);
+ALTER TABLE refvalues ADD COLUMN IF NOT EXISTS "passportNumber" VARCHAR(7);
+ALTER TABLE refvalues ADD COLUMN IF NOT EXISTS "passportIssueDate" DATE;
+ALTER TABLE refvalues ADD COLUMN IF NOT EXISTS "passportIssuedBy" VARCHAR(500);

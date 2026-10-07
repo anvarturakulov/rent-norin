@@ -1,0 +1,2 @@
+ALTER TABLE order_works
+  ADD COLUMN IF NOT EXISTS "finishedProductQty" DOUBLE PRECISION;

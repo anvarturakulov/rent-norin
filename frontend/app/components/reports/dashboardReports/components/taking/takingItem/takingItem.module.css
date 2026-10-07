@@ -1,0 +1,12 @@
+.value {
+    text-align: right;
+}
+
+.value span{
+    color: blue;
+}
+
+.title{
+    text-align: left!important;
+    padding-left: 20px!important;
+}

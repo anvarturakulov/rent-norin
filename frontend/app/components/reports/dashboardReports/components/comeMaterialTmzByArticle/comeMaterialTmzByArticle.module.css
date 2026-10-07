@@ -1,0 +1,73 @@
+.container {
+  margin-top: 12px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.emptyMessage {
+  padding: 12px;
+  border: 1px solid var(--border-color-light);
+  border-radius: 8px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 14px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  border: 1px solid var(--border-color-light);
+  padding: 7px 8px;
+}
+
+.table thead th {
+  background: #f8fafc;
+  font-weight: 600;
+  text-align: center;
+}
+
+.table tbody tr:nth-child(odd) {
+  background: #fcfcfd;
+}
+
+.numeric {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.center {
+  text-align: center;
+}
+
+.indexCol {
+  width: 42px;
+}
+
+.articleCol {
+  width: 120px;
+}
+
+.unitCol {
+  width: 90px;
+}
+
+.summaryRow td {
+  font-weight: 600;
+  background: #f1f5f9;
+}

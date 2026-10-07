@@ -1,0 +1,84 @@
+.sectionContainer {
+    margin-bottom: 24px;
+    border: 1px solid var(--border-color-light);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.tableWrap {
+    overflow-x: auto;
+    width: 100%;
+}
+
+.title {
+    margin: 0;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+    background: #fafbfc;
+    border-bottom: 1px solid var(--border-color-light);
+}
+
+.titleName {
+    text-align: left !important;
+    min-width: 160px;
+}
+
+.titleValue {
+    text-align: center !important;
+    font-variant-numeric: tabular-nums;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+.table td,
+.table th {
+    border: 0.5px solid var(--border-color-light);
+    padding: 8px 10px;
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+.table thead td {
+    text-align: center;
+    font-weight: 600;
+    font-size: 13px;
+    background: #f0f4f8;
+    color: #334155;
+}
+
+.table tbody tr:nth-child(even) {
+    background: #fafafa;
+}
+
+.table tbody tr:hover {
+    background: #f1f5f9;
+}
+
+.totalTd {
+    font-size: 14px !important;
+    font-weight: 600;
+    text-align: right !important;
+    background: #e8f4f8 !important;
+    font-variant-numeric: tabular-nums;
+}
+
+.button {
+    margin-left: 20px;
+    padding: 5px 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 600;
+    border: 1px solid var(--border-color-light);
+    background: #f8fafc;
+}
+
+.button:hover {
+    background: #f1f5f9;
+}

@@ -1,0 +1,128 @@
+.wrapper {
+    margin-top: 16px;
+    padding: 12px;
+    border: 1px solid var(--black-300, var(--border-color-light));
+    border-radius: 6px;
+    background: #fafafa;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.headerActions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.customToggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.actionBtn {
+    padding: 6px 12px;
+    font-size: 13px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.actionBtn:hover {
+    background: #eee;
+}
+
+.hint {
+    font-size: 13px;
+    color: #666;
+    font-style: italic;
+}
+
+.tableWrap {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    background: #fff;
+}
+
+.table th,
+.table td {
+    border: 1px solid var(--border-color-light);
+    padding: 8px 10px;
+    text-align: center;
+}
+
+.table th:first-child,
+.table td.typeCell {
+    text-align: left;
+    min-width: 180px;
+}
+
+.checkCell input {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+
+.typeCell {
+    vertical-align: middle;
+}
+
+.expandBtn {
+    display: block;
+    margin-top: 4px;
+    padding: 2px 6px;
+    font-size: 12px;
+    border: none;
+    background: transparent;
+    color: #2563eb;
+    cursor: pointer;
+}
+
+.tmzTabsBox {
+    margin-top: 12px;
+    padding: 10px;
+    border: 1px dashed #bbb;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.tmzTabsTitle {
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.tmzTabsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 8px;
+}
+
+.tmzTabLabel {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    cursor: pointer;
+}

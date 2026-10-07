@@ -1,0 +1,72 @@
+.box {
+  font-size: 14px;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.refreshBtn {
+  padding: 4px 10px;
+  font-size: 13px;
+  cursor: pointer;
+  border: 1px solid var(--border-color-light);
+  border-radius: 4px;
+  background: #fff;
+}
+
+.refreshBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border-color-light);
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.label {
+  color: #334155;
+  font-weight: 500;
+}
+
+.value {
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.sign {
+  color: #64748b;
+  margin-right: 4px;
+}
+
+.totalRow {
+  margin-top: 4px;
+  padding-top: 10px;
+  border-top: 2px solid var(--border-color-light);
+  border-bottom: none;
+}
+
+.totalRow .label,
+.totalRow .value {
+  font-weight: 700;
+  color: #0f172a;
+}

@@ -1,0 +1,232 @@
+.container {
+    padding: 20px;
+    background: #f5f5f5;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    background: white;
+    padding: 14px 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.header h2 { margin: 0; font-size: 20px; font-weight: 600; color: #333; }
+
+.addButton {
+    background: #1976d2;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+.addButton:hover { background: #1565c0; }
+
+.intervalBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 16px;
+    background: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    border-top: 1px dotted var(--border-color-light);
+    border-bottom: 1px dotted var(--border-color-light);
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.intervalText {
+    font-size: 15px;
+    color: #555;
+}
+
+.intervalBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border: 1px solid var(--border-color-light);
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+    font-size: 14px;
+    color: #555;
+    transition: all 0.2s;
+}
+
+.intervalBtn:hover {
+    border-color: #1976d2;
+    color: #1976d2;
+}
+
+.intervalIco {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.intervalActions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.tableWrap {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    background: white;
+}
+
+.table {
+    width: 100%;
+    min-width: 720px;
+    background: white;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-size: 13px;
+}
+
+.thead { background: #f5f5f5; }
+.thead th {
+    padding: 11px 12px;
+    text-align: left;
+    font-weight: 600;
+    color: #555;
+    font-size: 13px;
+    border-bottom: 2px solid var(--border-color-light);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.headerRow {
+    cursor: default;
+    user-select: none;
+}
+
+.headerRowFiltersOn th {
+    color: #d32f2f;
+}
+
+.filterRow th {
+    padding: 8px 10px;
+    font-weight: 400;
+    background: #fafafa;
+    border-bottom: 2px solid var(--border-color-light);
+    vertical-align: middle;
+}
+
+.filterInput {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px 8px;
+    font-size: 13px;
+    border: 1px solid var(--border-color-light);
+    border-radius: 4px;
+    background: white;
+    color: #333;
+}
+
+.filterInput::placeholder {
+    color: #aaa;
+    font-size: 12px;
+}
+
+.filterInput:focus {
+    outline: none;
+    border-color: #1976d2;
+}
+
+.filterInputActive {
+    border-color: #d32f2f;
+    background: #fff8f8;
+}
+
+.filterCellWithClear {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.filterCellWithClear .filterInput {
+    flex: 1;
+    min-width: 0;
+}
+
+.clearFiltersBtn {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: 1px solid var(--border-color-light);
+    border-radius: 4px;
+    background: white;
+    color: #666;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+}
+
+.clearFiltersBtn:hover {
+    background: #ffebee;
+    color: #d32f2f;
+    border-color: #d32f2f;
+}
+
+.emptyRow {
+    padding: 32px 12px !important;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+}
+
+.trRow { cursor: pointer; transition: background 0.15s; }
+.trRow:hover { background: #f0f7ff; }
+.tbody td { padding: 11px 12px; border-bottom: 1px solid var(--border-color-light); font-size: 13px; }
+
+.statusBadge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.35;
+    white-space: nowrap;
+}
+
+.statusDraft { background: #eceff1; color: #37474f; }
+.statusApproved { background: #e3f2fd; color: #1565c0; }
+.statusCompleted { background: #e8f5e9; color: #2e7d32; }
+.statusCancelled { background: #ffebee; color: #c62828; }
+
+.empty { padding: 40px; text-align: center; color: #999; }
+.loading { padding: 40px; text-align: center; color: #1976d2; }
+.error { padding: 20px; text-align: center; color: #d32f2f; }
+
+.overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.45);
+    display: flex; align-items: center; justify-content: center; z-index: 1000;
+    padding: 16px;
+}

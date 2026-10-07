@@ -1,0 +1,2 @@
+ALTER TABLE "docvalues"
+ADD COLUMN IF NOT EXISTS "remainCount" FLOAT;

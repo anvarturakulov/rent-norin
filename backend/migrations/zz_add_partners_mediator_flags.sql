@@ -1,0 +1,2 @@
+ALTER TABLE refvalues ADD COLUMN IF NOT EXISTS "isMediatorDriver" BOOLEAN DEFAULT false;
+ALTER TABLE refvalues ADD COLUMN IF NOT EXISTS "isMediatorMaster" BOOLEAN DEFAULT false;

@@ -1,0 +1,8 @@
+.value {
+    text-align: right;
+}
+
+.value span{
+    color: blue;
+    /* font-size: 14px; */
+}

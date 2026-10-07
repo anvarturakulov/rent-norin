@@ -1,0 +1,38 @@
+.box {
+    width: 100%;
+}
+
+.select{
+    display: block;
+    padding: 10px 15px;
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 10px 0;
+    width: 100%;
+    border: var(--border-width) solid var(--border-color-light);
+    border-radius: var(--border-radius-field);
+    background-color: #fff;
+    /* color: red; */
+}
+
+.selectNoMargin{
+    display: block;
+    padding: 10px 15px;
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 0;
+    width: 100%;
+    border: var(--border-width) solid var(--border-color-light);
+    border-radius: var(--border-radius-field);
+    background-color: #fff;
+    /* color: red; */
+}
+
+.label {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.chooseMe{
+    color: red;
+}

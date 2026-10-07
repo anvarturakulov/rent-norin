@@ -1,0 +1,48 @@
+.input{
+    display: block;
+    padding: 5px;
+    font-size: 14px;
+    line-height: 16px;
+    width: 100%;
+    border: var(--border-width) solid var(--border-color-light);
+    border-radius: var(--border-radius-field);
+    transition: border-color 0.2s ease;
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--border-color-focus);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.input::placeholder {
+   font-weight: 300; 
+}
+
+.label {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.box{
+    margin: 5px 0px;
+}
+
+.row {
+    display: flex;
+    gap: 8px;
+    align-items: stretch;
+}
+
+.inputDate {
+    flex: 1;
+    min-width: 0;
+}
+
+.inputTime {
+    width: 80px;
+    flex-shrink: 0;
+    text-align: center;
+}

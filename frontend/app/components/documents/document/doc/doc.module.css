@@ -1,0 +1,179 @@
+
+
+.TMZ{
+    border: var(--border-width) solid var(--border-color-light);
+    border-radius: var(--border-radius-field);
+    padding: 20px 10px;
+}
+
+.boxTMZ{
+    display: grid;
+    grid-template-columns: 0.5fr 4fr 1fr 1fr 1fr auto;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.boxTMZwithWorkers {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr 1fr auto;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.input {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 10px 0;
+    width: 100%;
+    border: var(--border-width) solid var(--border-color-light);
+    border-radius: var(--border-radius-field);
+}
+
+.boxBtn{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: start;
+}
+
+.btn{
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+    width: 40px;
+    color: red;
+    font-weight: 700;
+}
+
+.docBox{
+    /* border: 1px dotted var(--black-300); */
+    border: var(--border-width) solid var(--border-color-light);
+    /* /* background-color: #eff5e3; */
+    /* background-color: #F5F5F5;  */
+    background-color: #fff;
+    padding: 15px 20px;
+    /* box-shadow: 5px 3px 11px -3px rgba(0, 0, 0, 0.36); */
+    border-radius: 10px;
+    position: relative;
+}
+
+.partnersBox{
+    margin: 5px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.checkbox{
+    margin-left: 20px;
+}
+
+.notVisible{
+    display: none;
+}
+
+.button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 14px;
+    min-width: 130px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    background: none;
+    border: 1px solid var(--black-600);
+}
+
+.buttonOk{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 14px;
+    min-width: 130px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #e8f5e9;
+    border: 1px solid #43a047;
+    color: #2e7d32;
+}
+
+.buttonOk:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.buttonCancel{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 14px;
+    min-width: 130px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    background: none;
+    border: 1px solid #e53935;
+    color: #e53935;
+}
+
+.closeIco{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.boxBtnReopen {
+    position: sticky;
+    bottom: 12px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+    padding-right: 4px;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.buttonReopen {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 14px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #e53935;
+    color: #e53935;
+    pointer-events: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.buttonReopen:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.icoTrashReopen {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+

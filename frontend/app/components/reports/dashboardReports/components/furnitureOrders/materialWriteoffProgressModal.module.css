@@ -1,0 +1,138 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(15, 23, 42, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+}
+
+.modal {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 12px;
+  width: min(980px, calc(100vw - 1.5rem));
+  max-height: min(88vh, 720px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow:
+    0 4px 6px -1px rgba(15, 23, 42, 0.08),
+    0 24px 48px -12px rgba(15, 23, 42, 0.28);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+.head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.75rem 0.9rem 0.4rem;
+  flex-shrink: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.subtitle {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.closeBtn {
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #64748b;
+  padding: 0 0.25rem;
+}
+
+.closeBtn:hover {
+  color: #0f172a;
+}
+
+.body {
+  padding: 0.5rem 0.9rem 1rem;
+  overflow: auto;
+}
+
+.loading,
+.empty {
+  padding: 1.5rem;
+  text-align: center;
+  color: #64748b;
+}
+
+.error {
+  padding: 1rem;
+  color: #c62828;
+}
+
+.progressTable {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.progressHead,
+.progressRow {
+  display: grid;
+  grid-template-columns: 2fr 0.55fr 0.7fr 0.85fr 0.7fr 0.75fr 0.85fr;
+  gap: 8px;
+  align-items: center;
+  font-size: 13px;
+  padding: 8px 10px;
+}
+
+.progressHead {
+  font-weight: 600;
+  color: #334155;
+  border-bottom: 1px solid #cbd5e1;
+  position: sticky;
+  top: 0;
+  background: #f1f5f9;
+  z-index: 1;
+}
+
+.progressRow {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.progressRow:last-child {
+  border-bottom: none;
+}
+
+.totalsRow {
+  font-weight: 700;
+  border-top: 1px solid #94a3b8;
+  border-bottom: none;
+  background: #f8fafc;
+}
+
+.materialName {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.addedBadge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #b45309;
+  background: #fef3c7;
+  border-radius: 4px;
+  padding: 1px 6px;
+}

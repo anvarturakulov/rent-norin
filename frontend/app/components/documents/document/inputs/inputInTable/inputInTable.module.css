@@ -1,0 +1,32 @@
+.input{
+    display: block;
+    padding: 10px 15px;
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 10px 0;
+    width: 100%;
+    border: var(--border-width) solid var(--border-color-light);
+    border-radius: var(--border-radius-field);
+    text-align: right;
+    color: #000;
+    background-color: #fff;
+}
+
+.input::placeholder {
+   font-weight: 300; 
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--border-color-focus);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.input:active {
+    border-color: #1d4ed8;
+}
+
+.label {
+    font-size: 16px;
+    line-height: 24px;
+}

@@ -1,0 +1,304 @@
+.container {
+  margin-top: 12px;
+}
+
+.title {
+  margin: 20px 0 8px;
+  font-weight: 600;
+  background: #2563eb;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 16px;
+  box-shadow: 8px 8px 8px 0 rgba(34, 60, 80, 0.13);
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.summaryCard {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.summaryLabel {
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 4px;
+}
+
+.summaryValue {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.summaryHint {
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.summaryWarn {
+  border-color: #fdba74;
+  background: #fff7ed;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.search {
+  min-width: 220px;
+  flex: 1 1 220px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 7px 10px;
+  font-size: 13px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.filterBtn {
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  color: #334155;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.filterBtn:hover {
+  background: #f8fafc;
+}
+
+.filterBtnActive {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #fff;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.clientHeader {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 28px minmax(160px, 1.6fr) repeat(4, minmax(70px, 1fr));
+  gap: 8px;
+  align-items: center;
+  padding: 10px 12px;
+  background: #f8fafc;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+}
+
+.clientHeader:hover {
+  background: #f1f5f9;
+}
+
+.toggle {
+  color: #475569;
+  font-size: 14px;
+  width: 18px;
+}
+
+.clientName {
+  font-weight: 700;
+  color: #0f172a;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.stat {
+  white-space: nowrap;
+  font-weight: 600;
+  color: #0f172a;
+  text-align: right;
+  font-size: 13px;
+}
+
+.statLabel {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.details {
+  padding: 8px 12px 14px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.detailsHidden {
+  display: none;
+}
+
+.orderBlock {
+  margin-bottom: 12px;
+}
+
+.orderBlock:last-child {
+  margin-bottom: 0;
+}
+
+.orderHead {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  align-items: center;
+  padding: 8px 4px 6px;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.docLink {
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  font-weight: 700;
+  color: #1d4ed8;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.docLink:hover {
+  color: #1e40af;
+}
+
+.meta {
+  color: #475569;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.comment {
+  width: 100%;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+.statusReady {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.statusWaiting {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.statusDraft {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.table th,
+.table td {
+  border: 1px solid #e2e8f0;
+  padding: 6px 8px;
+}
+
+.table thead th {
+  background: #f8fafc;
+  font-weight: 600;
+  text-align: center;
+}
+
+.numeric {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.missingCell {
+  color: #c2410c;
+  font-weight: 600;
+}
+
+.sectionTitle {
+  margin: 8px 0 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.empty {
+  margin: 12px 0 24px;
+  color: #666;
+  font-size: 14px;
+}
+
+@media print {
+  .toolbar,
+  .toggle,
+  .filters {
+    display: none !important;
+  }
+
+  .detailsHidden {
+    display: block !important;
+  }
+
+  .card {
+    break-inside: avoid;
+  }
+
+  .docLink {
+    color: inherit;
+    text-decoration: none;
+  }
+}

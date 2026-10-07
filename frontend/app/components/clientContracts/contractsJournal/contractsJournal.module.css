@@ -1,0 +1,136 @@
+.container { padding: 20px; background: #f5f5f5; min-height: 100vh; }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    background: white;
+    padding: 14px 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.header h2 { margin: 0; font-size: 20px; font-weight: 600; color: #333; }
+
+.addButton {
+    background: #1976d2;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+}
+.addButton:hover { background: #1565c0; }
+
+.intervalBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 16px;
+    background: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    border-top: 1px dotted var(--border-color-light);
+    border-bottom: 1px dotted var(--border-color-light);
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.intervalText {
+    font-size: 15px;
+    color: #555;
+}
+
+.intervalBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border: 1px solid var(--border-color-light);
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+    font-size: 14px;
+    color: #555;
+    transition: all 0.2s;
+}
+
+.intervalBtn:hover {
+    border-color: #1976d2;
+    color: #1976d2;
+}
+
+.intervalIco {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.intervalActions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.table { width: 100%; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.08); }
+.thead { background: #f5f5f5; }
+.thead th { padding: 11px 12px; text-align: left; font-weight: 600; color: #555; font-size: 13px; border-bottom: 2px solid var(--border-color-light); }
+.trRow { cursor: pointer; transition: background 0.15s; }
+.trRow:hover { background: #f0f7ff; }
+.tbody td { padding: 11px 12px; border-bottom: 1px solid var(--border-color-light); font-size: 13px; }
+
+.statusBadge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.35;
+    white-space: nowrap;
+}
+
+.statusDraft {
+    background: #eceff1;
+    color: #37474f;
+}
+
+.statusApproved {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+
+.statusProduction {
+    background: #fff3e0;
+    color: #e65100;
+}
+
+.statusCompleted {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.empty { padding: 40px; text-align: center; color: #999; }
+.loading { padding: 40px; text-align: center; color: #1976d2; }
+.error { padding: 20px; text-align: center; color: #d32f2f; }
+
+.overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.45);
+    display: flex; align-items: center; justify-content: center; z-index: 1000;
+    padding: 16px;
+}
+
+.docOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1300;
+    background: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    padding: 20px;
+}

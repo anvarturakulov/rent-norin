@@ -1,0 +1,17 @@
+.container{
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.notSupported {
+    margin: 16px;
+    padding: 18px;
+    border-radius: 16px;
+    background: #fff;
+    border: 1px solid #d8e1ee;
+    color: #334155;
+    font-size: 14px;
+    line-height: 1.5;
+}

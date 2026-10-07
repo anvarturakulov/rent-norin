@@ -1,0 +1,217 @@
+.container {
+    position: relative;
+    width: 100%;
+    min-width: 120px;
+}
+
+.trigger {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+    width: 100%;
+    padding: 4px 6px;
+    border: 1px solid var(--border-color-light);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 13px;
+    background: #fafafa;
+    color: #222;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+}
+
+.trigger:hover {
+    border-color: #90caf9;
+    background: #fff;
+}
+
+.trigger.open {
+    border-color: #1976d2;
+    background: #fff;
+    box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.12);
+    border-radius: 4px 4px 0 0;
+}
+
+.trigger.openUp {
+    border-radius: 0 0 4px 4px;
+    border-top: 1px solid var(--border-color-light);
+}
+
+.trigger.disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+    background: #f5f5f5;
+}
+
+.input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 1.4;
+    background: transparent;
+    color: #222;
+    cursor: pointer;
+    padding: 0;
+}
+
+.input:focus {
+    cursor: text;
+}
+
+.input::placeholder {
+    color: #999;
+    font-weight: 400;
+}
+
+.displayValue {
+    flex: 1;
+    min-width: 0;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #222;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+    word-break: break-word;
+    cursor: pointer;
+}
+
+.displayValuePlaceholder {
+    color: #999;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.arrow {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    color: #90a4ae;
+    font-size: 7px;
+    transition: transform 0.15s ease;
+    pointer-events: none;
+}
+
+.open .arrow {
+    color: #1976d2;
+}
+
+/* ---------- dropdown (portal, fixed positioning) ---------- */
+
+.dropdownFixed {
+    position: fixed;
+    min-width: 200px;
+    background: #fff;
+    border: 1px solid #1976d2;
+    border-top: 1px solid var(--border-color-light);
+    border-radius: 0 0 4px 4px;
+    overflow-y: auto;
+    z-index: 99999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dropdownFixedUp {
+    border-top: 1px solid #1976d2;
+    border-bottom: 1px solid var(--border-color-light);
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.option {
+    padding: 6px 10px;
+    font-size: 13px;
+    line-height: 1.4;
+    cursor: pointer;
+    color: #333;
+    transition: background 0.1s;
+    border-left: 3px solid transparent;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+    word-break: break-word;
+}
+
+.option:hover {
+    background: #f5f7fa;
+}
+
+.option.selected {
+    background: #e3f2fd;
+    color: #1565c0;
+    font-weight: 500;
+    border-left-color: #1976d2;
+}
+
+.option.highlighted {
+    background: #e8f0fe;
+    border-left-color: #1976d2;
+}
+
+.option.selected.highlighted {
+    background: #bbdefb;
+}
+
+.placeholder {
+    padding: 6px 10px;
+    font-size: 13px;
+    line-height: 1.4;
+    cursor: pointer;
+    color: #9e9e9e;
+    font-style: italic;
+    border-left: 3px solid transparent;
+    transition: background 0.1s;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+    word-break: break-word;
+}
+
+.placeholder:hover {
+    background: #f5f7fa;
+}
+
+.placeholder.highlighted {
+    background: #e8f0fe;
+    border-left-color: #1976d2;
+}
+
+.noResults {
+    padding: 10px;
+    font-size: 13px;
+    color: #9e9e9e;
+    text-align: center;
+    font-style: italic;
+}
+
+/* ---------- scrollbar ---------- */
+
+.dropdown::-webkit-scrollbar {
+    width: 5px;
+}
+
+.dropdown::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.dropdown::-webkit-scrollbar-thumb {
+    background: #cfd8dc;
+    border-radius: 3px;
+}
+
+.dropdown::-webkit-scrollbar-thumb:hover {
+    background: #90a4ae;
+}

@@ -1,0 +1,3 @@
+ALTER TABLE order_works
+    ADD COLUMN IF NOT EXISTS "workArticle" VARCHAR(255),
+    ADD COLUMN IF NOT EXISTS "unit" VARCHAR(255);

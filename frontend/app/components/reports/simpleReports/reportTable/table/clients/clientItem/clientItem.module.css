@@ -1,0 +1,19 @@
+.sectionName{
+    background-color:blanchedalmond;
+}
+
+.number{
+    width: 50px;
+    text-align: center!important;
+}
+
+.title{
+    text-align: left!important;
+    max-width: 300px!important;
+    padding-left: 10px!important;
+}
+
+.total{
+    background-color: rgb(198, 228, 230);
+    font-size: 400!important;
+}

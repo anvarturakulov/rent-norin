@@ -1,0 +1,257 @@
+.page {
+  padding: 20px 24px 32px;
+  max-width: 1100px;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--black-900);
+  margin: 0 0 6px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: var(--black-600);
+  margin: 0;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.dateInput {
+  padding: 8px 12px;
+  border: 1px solid var(--black-300);
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--black-300);
+  background: var(--white);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #f4f4f5;
+}
+
+.btnPrimary {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  background: var(--black-900);
+  color: var(--white);
+  border: 1px solid var(--black-900);
+}
+
+.btnPrimary:hover {
+  background: #333;
+}
+
+.btnPrimary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.matrixWrap {
+  border: 1px solid var(--black-300);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--white);
+}
+
+.groupHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #f4f4f5;
+  border-bottom: 1px solid var(--black-300);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.table th,
+.table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--black-300);
+  text-align: left;
+}
+
+.table th {
+  font-weight: 600;
+  background: #fafafa;
+  color: var(--black-700);
+}
+
+.table th.classCol {
+  min-width: 108px;
+  width: 108px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.table td.classCol {
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.percentCell {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.percentSign {
+  font-size: 14px;
+  color: var(--black-700);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.code {
+  font-size: 11px;
+  color: var(--black-600);
+  font-family: monospace;
+}
+
+.percentInput {
+  width: 64px;
+  min-width: 64px;
+  padding: 6px 8px;
+  border: 1px solid var(--black-300);
+  border-radius: 6px;
+  text-align: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.percentInput:disabled {
+  background: #f4f4f5;
+}
+
+.addRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 16px;
+  border-top: 1px solid var(--black-300);
+  background: #fafafa;
+}
+
+.addRow input {
+  padding: 6px 10px;
+  border: 1px solid var(--black-300);
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.addRow input.codeField {
+  width: 140px;
+  text-transform: uppercase;
+}
+
+.addRow input.nameField {
+  flex: 1;
+  min-width: 180px;
+}
+
+.iconBtn {
+  padding: 4px 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #b91c1c;
+  font-size: 13px;
+}
+
+.readonlyNote {
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--black-600);
+}
+
+.noSnapshotHint {
+  margin: 0 0 16px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #fcd34d;
+  background: #fffbeb;
+  font-size: 13px;
+  color: #92400e;
+}
+
+.loading {
+  padding: 40px;
+  text-align: center;
+  color: var(--black-600);
+}
+
+.flagCol {
+  min-width: 140px;
+  white-space: nowrap;
+}
+
+.flagToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--black-700);
+  cursor: pointer;
+  user-select: none;
+}
+
+.flagToggle input {
+  margin: 0;
+  cursor: pointer;
+}
+
+.badgeIncluded,
+.badgeInformative {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.badgeIncluded {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.badgeInformative {
+  background: #f3f4f6;
+  color: #6b7280;
+  font-style: italic;
+}

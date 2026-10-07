@@ -1,0 +1,117 @@
+.root {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 11pt;
+    line-height: 1.4;
+    color: #1a1a1a;
+    max-width: 190mm;
+    padding: 10mm 14mm;
+    box-sizing: border-box;
+}
+
+.badge {
+    display: inline-block;
+    background: #1565c0;
+    color: #fff;
+    font-size: 9pt;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 4pt 10pt;
+    border-radius: 3pt;
+    margin-bottom: 10pt;
+}
+
+.title {
+    font-size: 18pt;
+    font-weight: 700;
+    margin: 0 0 4pt;
+    color: #0d47a1;
+}
+
+.meta {
+    font-size: 10pt;
+    color: #444;
+    margin-bottom: 14pt;
+    padding-bottom: 10pt;
+    border-bottom: 2pt solid #1565c0;
+}
+
+.intro {
+    margin: 0 0 12pt;
+    font-size: 10.5pt;
+    color: #333;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 10pt;
+    margin-bottom: 14pt;
+}
+
+.table th {
+    background: #e3f2fd;
+    color: #0d47a1;
+    font-weight: 700;
+    text-align: left;
+    padding: 8pt 10pt;
+    border: 1pt solid #90caf9;
+}
+
+.table td {
+    padding: 7pt 10pt;
+    border: 1pt solid var(--border-color-light);
+    vertical-align: top;
+}
+
+.table tr:nth-child(even) td {
+    background: #fafafa;
+}
+
+.totalBox {
+    background: #e8f5e9;
+    border: 1pt solid #66bb6a;
+    border-radius: 4pt;
+    padding: 10pt 12pt;
+    margin-bottom: 12pt;
+}
+
+.totalLabel {
+    font-size: 10pt;
+    color: #2e7d32;
+}
+
+.totalValue {
+    font-size: 16pt;
+    font-weight: 700;
+    color: #1b5e20;
+}
+
+.note {
+    font-size: 9.5pt;
+    color: #555;
+    margin: 0 0 16pt;
+    padding: 8pt 10pt;
+    background: #fff8e1;
+    border-left: 3pt solid #ffa000;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20pt;
+    margin-top: 20pt;
+    font-size: 10pt;
+}
+
+.footerBox {
+    flex: 1;
+    border-top: 1pt solid #999;
+    padding-top: 6pt;
+}
+
+@media print {
+    .root {
+        max-width: none;
+        padding: 0;
+    }
+}

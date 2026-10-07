@@ -1,0 +1,1 @@
+ALTER TABLE docvalues ADD COLUMN IF NOT EXISTS "isMediator" BOOLEAN DEFAULT false;

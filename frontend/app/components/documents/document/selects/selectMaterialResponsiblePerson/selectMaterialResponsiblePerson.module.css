@@ -1,0 +1,30 @@
+.box {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  margin: 10px 0px;
+  text-align: left;
+}
+
+.select {
+  display: block;
+  padding: 10px 20px;
+  width: 100%;
+  font-size: 18px;
+  border: var(--border-width) solid var(--border-color-light);
+  border-radius: var(--border-radius-field);
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.select:focus {
+  outline: none;
+  border-color: var(--border-color-focus);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+

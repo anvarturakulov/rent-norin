@@ -1,0 +1,79 @@
+.referenceBox{
+    /* background-color: #eff5e3; */
+    padding: 10px;
+}
+
+.box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 10px;
+    transition: all 5s;
+    /* display: block; */
+}
+
+.boxClose{
+    transition: .3s;
+    display: none;
+}
+
+.input {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px dotted var(--black-300);
+    /* background: #f5f5f5; */
+}
+
+.button{
+    display: inline-block;
+}
+
+.boxBtn{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: left;
+}
+
+.btn{
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+    width: 40px;
+    color: red;
+    font-weight: 700;
+}
+
+.select{
+    display: block;
+    padding: 10px 5px;
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 10px 0;
+    width: 100%;
+    border: 0.6px dotted var(--black-300);
+    /* background: #f5f5f5; */
+    /* background-color: blue; */
+    background-color: #fff;
+}
+
+.label {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.checkBoxs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.priceBox{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}

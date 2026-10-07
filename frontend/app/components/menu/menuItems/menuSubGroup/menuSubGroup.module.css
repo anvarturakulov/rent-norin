@@ -1,0 +1,105 @@
+.subGroup {
+    display: none;
+}
+
+.subGroup.isOpened {
+    display: block;
+    /* margin-bottom: 5px; */
+    border: 1px solid var(--border-color-light);
+    /* border-radius: 8px; */
+    overflow: hidden;
+    background-color: #ffffff;
+    /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); */
+}
+
+.groupHeader {
+    font-size: 11px;
+    font-weight: 700;
+    color: #374151;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    /* text-align: center; */
+    padding: 7px 10px;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border-bottom: 1px solid var(--border-color-light);
+    margin: 0;
+    position: relative;
+    display: none;
+}
+
+.groupHeader::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.groupHeader.isOpened {
+    display: block;
+}
+
+.groupContent {
+    display: none;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.groupContent.isOpened {
+    display: block;
+}
+
+.groupSubItem {
+    margin-left: 5px;
+    /* display: none; */
+    border-bottom: 0.1px dotted rgb(139, 136, 136);
+    /* border-bottom: 1px solid f5f5f5; */
+    border-top: none;
+    padding: 7px 10px;
+    padding-left: 10px;
+    cursor:default;
+}
+
+/* .groupSubItem::before {
+    content: '•';
+    color: #9ca3af;
+    margin-right: 10px;
+    font-size: 16px;
+    transition: all 0.2s ease;
+} */
+
+.groupSubItem:hover {
+    /* padding-left: 10px; */
+    background-color: #fff;
+    color: #000;
+}
+
+.groupSubItem.active {
+    background-color: #12ce39;
+    color: #fff;
+    font-weight: 400;
+    border-left: none;
+    padding-left: 10px;
+    border-radius: 4px;
+}
+
+.groupSubItem.active:hover {
+    background-color: #0ea82e;
+    color: #fff;
+}
+
+.groupSubItem:hover::before {
+    color: #12ce39;
+    transform: scale(1.2);
+}
+
+.groupSubItem:last-child {
+    border-bottom: none;
+    border-radius: 0 0 8px 8px;
+}
+
+.groupSubItem:first-child {
+    border-radius: 0;
+}

@@ -1,0 +1,202 @@
+.title {
+  margin: 20px 0 12px;
+  font-weight: 600;
+  background: #2563eb;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 16px;
+  box-shadow: 8px 8px 8px 0px rgba(34, 60, 80, 0.13);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.filterBtn {
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  color: #334155;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.filterBtn:hover {
+  background: #f8fafc;
+}
+
+.filterBtnActive {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #fff;
+}
+
+.tableContainer {
+  max-height: 650px;
+  overflow: auto;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.table {
+  font-size: 13px;
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1400px;
+}
+
+.table td,
+.table th {
+  border: 0.5px solid var(--border-color-light);
+  padding: 8px 10px;
+  font-weight: 400;
+  vertical-align: top;
+}
+
+.table thead {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 10;
+}
+
+.table thead td {
+  text-align: center;
+  font-weight: 600;
+  font-size: 12px;
+  background: #f5f5f5;
+  white-space: nowrap;
+}
+
+.table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.numCell {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.dateCell {
+  text-align: center;
+  white-space: nowrap;
+  width: 88px;
+  max-width: 96px;
+}
+
+.leftCell {
+  text-align: left;
+}
+
+.clientCell {
+  text-align: left;
+  min-width: 180px;
+  max-width: 280px;
+}
+
+.imageCell {
+  text-align: center;
+  width: 72px;
+  vertical-align: middle;
+}
+
+.thumbBtn {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.thumbBtn:hover .productThumb {
+  border-color: #1565c0;
+  box-shadow: 0 0 0 2px rgba(21, 101, 192, 0.2);
+}
+
+.productThumb {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+  display: block;
+  background: #f8fafc;
+}
+
+.productLink {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: #1565c0;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.productLink:hover {
+  color: #0d47a1;
+}
+
+.productLink:disabled {
+  color: inherit;
+  text-decoration: none;
+  cursor: default;
+}
+
+.multiLine {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+  min-width: 140px;
+}
+
+.docLink {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: #1565c0;
+  font: inherit;
+  text-align: left;
+  line-height: 1.35;
+  white-space: pre-line;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.docLink:hover {
+  color: #0d47a1;
+}
+
+.fileLink {
+  color: #1565c0;
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+.fileLink:hover {
+  color: #0d47a1;
+}
+
+.empty {
+  margin: 12px 0 24px;
+  color: #666;
+  font-size: 14px;
+}
+
+.dash {
+  color: #999;
+}

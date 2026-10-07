@@ -1,0 +1,115 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    user-select: none;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #f9f9f9;
+    margin-bottom: 10px;
+}
+
+.table td,
+.table th {
+    border-left: 1px solid var(--border-color-light);
+    text-align: left;
+    padding: 10px 7px;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+.table tr {
+    margin: 5px 0;
+    border: 0.5px solid #e5e5e5;
+}
+
+.table tr:hover {
+    margin: 5px 0;
+    border: 1px solid green;
+}
+
+.table th {
+    font-weight: bold;
+}
+
+.table thead,
+.table tbody tr {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.table thead {
+    width: calc(100% - 1.1em);
+    position: relative;
+}
+
+.table tbody {
+    display: block;
+    max-height: 600px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.table thead th:last-child::after {
+    content: ' ';
+    position: absolute;
+    /* background-color: #337ab7; */
+    width: 1.1em;
+    height: 40px;
+    right: -1.1em;
+    top: 0;
+}
+
+.id{
+    width: 50px;
+}
+
+.rowAction{
+    width: 50px;
+}
+
+.btns{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5px;
+}
+
+.banned{
+    color: red!important;
+    text-decoration: line-through;
+}
+
+.icoTrash{
+    width: 20px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.icoShow {
+    width: 20px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.icoTrash:hover{
+    fill: red;
+}
+
+.icoTrash.banned{
+    fill: red;
+}
+
+.title{
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.newElement{
+    margin-bottom: 20px;
+}

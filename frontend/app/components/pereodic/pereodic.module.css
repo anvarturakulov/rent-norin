@@ -1,0 +1,89 @@
+.pereodicBox {
+    margin-top: 4px;
+    border: 1px solid var(--black-300);
+    border-radius: 12px;
+    padding: 20px 22px 22px;
+    background: linear-gradient(180deg, #f8fafc 0%, #fff 48%);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.newPereodic {
+    border-left: 4px solid var(--primary);
+    background: linear-gradient(180deg, rgba(37, 99, 235, 0.06) 0%, #fff 40%);
+}
+
+.boxClose {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    display: none;
+}
+
+.formCaption {
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--black-600);
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--black-300);
+}
+
+.input {
+    display: inline-block;
+    padding: 10px 14px;
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid var(--black-300);
+    border-radius: 8px;
+    background: var(--white);
+}
+
+.button{
+    display: inline-block;
+}
+
+.boxBtn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+    justify-content: flex-start;
+}
+
+.btn{
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+    width: 40px;
+    color: red;
+    font-weight: 700;
+}
+
+.select{
+    display: block;
+    padding: 10px 5px;
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 10px 0;
+    width: 100%;
+    border: 0.6px dotted var(--black-300);
+    /* background: #f5f5f5; */
+    /* background-color: blue; */
+    background-color: #fff;
+}
+
+.label {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.checkBoxs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.priceBox{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}

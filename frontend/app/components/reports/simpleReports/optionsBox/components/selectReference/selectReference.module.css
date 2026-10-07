@@ -1,0 +1,119 @@
+.select{
+    display: block;
+    padding: 10px 15px;
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 10px 0;
+    width: 100%;
+    border: 0.6px dotted blue;
+    background-color: #fff;
+}
+
+.label {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.chooseMe{
+    color: red;
+}
+
+/* Новые стили для поиска */
+.customSelectContainer {
+    position: relative;
+    width: 100%;
+}
+
+.customSelect {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 10px 0;
+    width: 100%;
+    border: 0.6px dotted blue;
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+}
+
+.denseBox {
+    width: 100%;
+}
+
+.dense {
+    margin: 0;
+    padding: 0 12px;
+    min-height: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+}
+
+.searchInput {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    width: 100%;
+}
+
+.searchInput.defaultSelected {
+    color: #999;
+}
+
+.arrow {
+    margin-left: 10px;
+    font-size: 12px;
+    color: #666;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid var(--border-color-light);
+    border-top: none;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.optionsList {
+    padding: 0;
+    margin: 0;
+}
+
+.option {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--border-color-light);
+    transition: background-color 0.2s;
+}
+
+.option:hover {
+    background-color: #f5f5f5;
+}
+
+.option.selected {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.option.defaultOption {
+    color: red;
+    font-weight: bold;
+}
+
+.noResults {
+    padding: 10px 15px;
+    color: #666;
+    font-style: italic;
+}
