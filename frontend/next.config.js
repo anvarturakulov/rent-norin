@@ -7,7 +7,7 @@ module.exports = {
         NEXT_PUBLIC_DOMAIN:
             process.env.NEXT_PUBLIC_DOMAIN ||
             (process.env.NODE_ENV === 'production'
-                ? 'https://jbi.kord.uz'
+                ? 'https://norin.kord.uz'
                 : 'http://localhost:5009'),
     },
     images: {
@@ -15,12 +15,7 @@ module.exports = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'jbi.kord.uz',
-                pathname: '/api/upload/image/**',
-            },
-            {
-                protocol: 'https',
-                hostname: 'mebers.kord.uz',
+                hostname: 'norin.kord.uz',
                 pathname: '/api/upload/image/**',
             },
             {
